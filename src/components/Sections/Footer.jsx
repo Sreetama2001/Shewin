@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 import {BsFillArrowUpCircleFill} from 'react-icons/bs';
 import LogoImg from "../../assets/svg/Logo";
 
-export default function Contact() {
+export default function Footer() {
 
   const getCurrentYear = () => {
     return new Date().getFullYear();
@@ -17,13 +17,13 @@ export default function Contact() {
         <div className="container">
           <InnerWrapper className="flexSpaceCenter" style={{ padding: "30px 0" }}>
             <Link className="flexCenter animate pointer" to="home" smooth={true} offset={-80}>
-              <LogoImg />
-              <h1 className="font15 extraBold whiteColor" style={{ marginLeft: "15px" }}>
+              <img src="https://user-images.githubusercontent.com/86917304/210371198-dc840422-935e-4712-9cf8-f6b6bbf28792.png" width={90} alt="logo" />
+              <h1 className="font15 extraBold whiteColor" style={{ marginLeft: "15px" , fontSize:"20px" }}>
                 Shewin
               </h1>
             </Link>
-            <StyleP className="whiteColor font13">
-              © {getCurrentYear()} - <span className="purpleColor font13">Shewin</span> All Right Reserved
+            <StyleP className="whiteColor font15">
+              © {getCurrentYear()} - <span className="purpleColor font15" style={{cursor:"pointer"}}>Shewin</span> All Right Reserved
             </StyleP>
 
             <Link className="whiteColor animate pointer font13" to="home" smooth={true} offset={-80}>
