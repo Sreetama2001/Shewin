@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+.main-user {
+	font-family: "DM Sans", sans-serif;
+	line-height: 1.5;
+	background-color: #fff;
+	padding: 0 2rem;
+}
+img {
+	max-width: 100%;
+	display: block;
+}
+input {
+	appearance: none;
+	border-radius: 0;
+}
+.card {
+	margin: 2rem auto;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 425px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px 0 rgba(153, 153, 153, 0.25);
+	padding: 0.75rem;
+}
+.card-image {
+	border-radius: 8px;
+	overflow: hidden;
+	padding-bottom: 65%;
+	background-image: url("https://assets.codepen.io/285131/coffee_1.jpg");
+	background-repeat: no-repeat;
+	background-size: 150%;
+	background-position: 0 5%;
+	position: relative;
+}
+.card-image1 {
+	border-radius: 8px;
+	overflow: hidden;
+	padding-bottom: 65%;
+	background-image: url("https://www.bertelsmann-stiftung.de/fileadmin/files/_processed_/a/c/csm_Fotolia_64336912_X_Original_41023_d2446515ba.jpg");
+	background-repeat: no-repeat;
+	background-size: 150%;
+	background-position: 0 5%;
+	position: relative;
+}
+.card-heading {
+	position: absolute;
+	left: 10%;
+	top: 15%;
+	right: 10%;
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: #735400;
+	line-height: 1.222;
+}
+.card-heading small {
+	display: block;
+	font-size: 0.75em;
+	font-weight: 400;
+	margin-top: 0.25em;
+}
+.card-form {
+	padding: 2rem 1rem 0;
+}
+.input {
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
+	outline: none;
+	padding-top: 1.5rem;
+}
+.input + .input {
+	margin-top: 1.5rem;
+}
+.input-label {
+	color: #8597a3;
+	position: absolute;
+	top: 1.5rem;
+	transition: 0.25s ease;
+}
+.input-field {
+	border: 0;
+	z-index: 1;
+	background-color: transparent;
+	border-bottom: 2px solid #eee;
+	font: inherit;
+	outline: none;
+	font-size: 1.125rem;
+	padding: 0.8rem 0;
+}
+.input-field:focus,
+.input-field:valid {
+	outline: none;
+	border-bottom-color: #FA4C86;
+}
+.input-field:focus + .input-label,
+.input-field:valid + .input-label {
+	color: #FA4C86;
+	transform: translateY(-1.5rem);
+}
+.action {
+	margin-top: 2rem;
+}
+.action-button {
+	font: inherit;
+	font-size: 1.25rem;
+	padding: 1em;
+	width: 100%;
+	font-weight: 500;
+	background-color: #FA4C86;
+	border-radius: 6px;
+	color: #fff;
+	border: 0;
+}
+.action-button:focus {
+	outline: 0;
+}
+.card-info {
+	padding: 1rem 1rem;
+	text-align: center;
+	font-size: 0.875rem;
+	color: #8597a3;
+}
+.card-info a {
+	display: block;
+	color: #FA4C86;
+	text-decoration: none;
+}
