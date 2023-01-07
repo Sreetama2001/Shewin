@@ -34,7 +34,6 @@ export default function Projects() {
                 img={"https://previews.123rf.com/images/artinspiring/artinspiring2003/artinspiring200300513/142303595-young-woman-have-in-vitro-fertilization-treatment-in-fertility-clinic-gynecologist-doctor-take-a-wom.jpg"}
                 title="Get Gynaecologist's care"
                 text="Take an appointment from the nearest gynaecologist"
-                action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -42,7 +41,6 @@ export default function Projects() {
                 img={"https://user-images.githubusercontent.com/73426684/211125553-81fa8184-12de-4874-ba1f-051ab6b7c0ad.jpg"}
                 title="Get PILLs and PADs"
                 text="Get to the nearest medical store for pills or pads"
-                action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -50,7 +48,6 @@ export default function Projects() {
                 img={"https://img.freepik.com/free-vector/creative-menstrual-calendar-concept-illustrated_23-2148662282.jpg?w=740&t=st=1673051551~exp=1673052151~hmac=cc8dc3c63a9c7145f0fb7e473fb5ccd6ecd8692f5a841a58c8dedd9a689d9db7"}
                 title="Period Trackers"
                 text="Get an complete details of your period cycles, mood swings , diet chart and sleep cycle "
-                action={() => alert("clicked")}
               />
             </div>
           </div>

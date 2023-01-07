@@ -45,7 +45,7 @@ const UserForm = () => {
 			<TopNavbar />
 			<div
 				className="main-user"
-				style={{ paddingTop: "200px", paddingBottom: "100px" }}
+				style={{ paddingTop: "120px", paddingBottom: "100px" }}
 			>
 				<Toaster
 					position="top-center"

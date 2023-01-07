@@ -28,7 +28,7 @@ export default function Blog() {
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 tag="company"
                 author="Luke Skywalker, 2 days ago"
-                action={() => alert("clicked")}
+
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -37,7 +37,7 @@ export default function Blog() {
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 tag="company"
                 author="Luke Skywalker, 2 days ago"
-                action={() => alert("clicked")}
+
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -46,7 +46,7 @@ export default function Blog() {
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 tag="company"
                 author="Luke Skywalker, 2 days ago"
-                action={() => alert("clicked")}
+
               />
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function Blog() {
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 tag="company"
                 author="Luke Skywalker, 2 days ago"
-                action={() => alert("clicked")}
+
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -66,7 +66,7 @@ export default function Blog() {
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 tag="company"
                 author="Luke Skywalker, 2 days ago"
-                action={() => alert("clicked")}
+
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -75,13 +75,13 @@ export default function Blog() {
                 text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 tag="company"
                 author="Luke Skywalker, 2 days ago"
-                action={() => alert("clicked")}
+
               />
             </div>
           </div>
           {/* <div className="row flexCenter">
             <div style={{ margin: "50px 0", width: "200px" }}>
-              <FullButton title="Load More" action={() => alert("clicked")} />
+              <FullButton title="Load More />
             </div>
           </div> */}
         </div>
@@ -91,9 +91,7 @@ export default function Blog() {
           <HeaderInfo>
             <h1 className="font40 extraBold">What They Say?</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              Testimonials by our happy users , how we handle their problems
             </p>
           </HeaderInfo>
           <TestimonialSlider />

@@ -35,20 +35,20 @@ export default function TestimonialSlider() {
           <TestimonialBox
             text="Your product is affordable, I love the customizations I can do with it, and it works. I've been a customer of yours for years, so I've seen you grow and have witnessed the changes from minor updates to major updates. Thanks for doing what you do, thanks for building this software, and thanks for the help you give.
             Thanks,"
-            author="Mark Michel"
+            author="Micheal Johnathan"
           />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
           <TestimonialBox
             text="Another lovely experience is, I changed my host recently, I went through some major transition issues which I was not able to solve. Your customer support from the forum did a amazing job in helping me, I felt your hands holding me all the while in my crisis throughout. Thank you so much!"
-            author="Ralph Waldo Emerson"
+            author="Amanda Emerson"
           />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
           <TestimonialBox
             text="Thanks for the all the time and effort you guys put into your products.
 I must also say that before I purchased your product I was never happy with support forums. I've used others and had my questions go unanswered for days and even weeks. You guys though have set a standard by which I'll measure everyone else by."
-            author="Mike Kalos"
+            author="Nia Kalos"
           />
         </LogoWrapper>
       </Slider>
