@@ -89,11 +89,11 @@ export default function Blog() {
       <div className="lightBg" style={{padding: '50px 0'}}>
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">What They Say?</h1>
+            <h1 className="font40 extraBold">Doctor Says</h1>
             <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            Periods are also stigmatized.
               <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
+              A 2002 study found that people reported greater feelings of negativity toward a woman if they knew she was menstruating.
             </p>
           </HeaderInfo>
           <TestimonialSlider />
