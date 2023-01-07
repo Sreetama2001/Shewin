@@ -44,13 +44,13 @@ export default function TopNavbar() {
 					</BurderWrapper>
 					<UlWrapper className="flexNullCenter">
 						<li className="semiBold font15 pointer hover">
-							<Anc style={{ padding: "10px 15px" , color:"black"}} to="/">
+							<Anc style={{ padding: "10px 15px", color: "black" }} to="/">
 								Home
 							</Anc>
 						</li>
 						<li className="semiBold font15 pointer hover">
 							<Link
-								style={{ padding: "10px 15px" , color:"black" }}
+								style={{ padding: "10px 15px", color: "black" }}
 								to="services"
 								spy={true}
 								smooth={true}
@@ -64,7 +64,7 @@ export default function TopNavbar() {
 								activeclassName="active"
 								style={{ padding: "10px 15px", color: "black" }}
 								spy={true}
-								to="projects" // changing this to projects or health services 
+								to="projects" // changing this to projects or health services
 								smooth={true}
 								offset={-80}
 							>
@@ -74,7 +74,7 @@ export default function TopNavbar() {
 						<li className="semiBold font15 pointer hover">
 							<Link
 								activeclassName="active"
-								style={{ padding: "10px 15px" , color:"black" }}
+								style={{ padding: "10px 15px", color: "black" }}
 								to="projects"
 								spy={true}
 								smooth={true}
@@ -89,20 +89,16 @@ export default function TopNavbar() {
 							</Anc>
 						</li> */}
 						<li>
-						<Link
-							activeclassName="active"
-							style={{ padding: "10px 15px", color: "black" }}
-							spy={true}
-							to="blogs" // changing this to projects or health services 
-							smooth={true}
-							offset={-80}
+							<Anc
+								style={{ padding: "10px 15px", color: "black" }}
+								to="/blog" // changing this to projects or health services
 							>
 								Blogs
-							</Link>
+							</Anc>
 						</li>
 						<li className="semiBold font15 pointer hover">
 							<a
-								style={{ padding: "10px 15px" , color:"black" }}
+								style={{ padding: "10px 15px", color: "black" }}
 								target="_blank"
 								href="https://donate.stripe.com/test_eVa8xv6m603J4Za148"
 							>
@@ -112,7 +108,7 @@ export default function TopNavbar() {
 						<li className="semiBold font15 pointer hover">
 							<Link
 								activeclassName="active"
-								style={{ padding: "10px 15px" , color:"black" }}
+								style={{ padding: "10px 15px", color: "black" }}
 								to="contact"
 								spy={true}
 								smooth={true}
