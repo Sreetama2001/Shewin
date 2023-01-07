@@ -13,6 +13,7 @@ import BlogForm from "./components/Appointment/Blog_Form.js";
 import Blog from "./components/Blog/Blog.jsx";
 import BlogShow from "./components/BlogShow/BlogShow.jsx";
 import DashboardBlogCard from "./components/Sections/DashboardBlogCard.jsx";
+import Modal from "./components/Modal/Modal"
 
 export default function App() {
 	return (
@@ -37,6 +38,7 @@ export default function App() {
 					<Route path="/appointment" element={<UserForm />} />
 					<Route path="/blog" element={<Blog />} />
 					<Route path="/blog/:id" element={<BlogShow />} />
+					<Route path="/modal" element={<Modal />} />
 					<Route path="/blogform" element={<BlogForm />} />
 					<Route path="/dash" element={<DashboardBlogCard />} />
 				</Routes>

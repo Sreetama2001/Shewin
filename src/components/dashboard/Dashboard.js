@@ -7,10 +7,12 @@ import { onAuthStateChanged } from "firebase/auth";
 import { collection, doc } from "firebase/firestore";
 import { textAlign } from "@mui/system";
 import DashboardBlogCard from "../Sections/DashboardBlogCard";
+import Modal from "../Modal/Modal";
 import "../Sections/blogCard.css";
 const Dashboard = () => {
 	const navigate = useNavigate();
 	const [CurrentUser, SetCurrentuser] = useState({});
+	const [openModel, setOpenModel] = useState(false);
 
 	const userActivity = () => {
 		onAuthStateChanged(auth, (user) => {
@@ -331,8 +333,8 @@ const Dashboard = () => {
 									{/* <!-- Actions --> */}
 									<div className="col-sm-6 col-12 text-sm-end">
 										<div className="mx-n1">
-											<a
-												href="#"
+											<button
+												onClick={() => setOpenModel(true)}
 												className="btn d-inline-flex btn-sm btn-primary mx-1"
 												style={{
 													background: "#F65AA8",
@@ -347,7 +349,7 @@ const Dashboard = () => {
 													></i>
 												</span>
 												<span>Create Reminder</span>
-											</a>
+											</button>
 										</div>
 									</div>
 								</div>
@@ -504,6 +506,7 @@ const Dashboard = () => {
 									</div>
 								);
 							})}
+							{openModel && <Modal setOpenModel={setOpenModel} />}
 						</div>
 					</main>
 				</div>
