@@ -5,21 +5,22 @@ import RollerIcon from "../../assets/svg/Services/RollerIcon";
 import MonitorIcon from "../../assets/svg/Services/MonitorIcon";
 import BrowserIcon from "../../assets/svg/Services/BrowserIcon";
 import PrinterIcon from "../../assets/svg/Services/PrinterIcon";
-import {MdScreenShare , MdVolunteerActivism} from 'react-icons/md';
-import {FaNetworkWired , FaBuilding} from 'react-icons/fa';
+import {MdScreenShare , MdTrackChanges,MdVolunteerActivism} from 'react-icons/md';
+import {FaNetworkWired ,FaBlogger, FaBuilding} from 'react-icons/fa';
+import {BsFillPatchExclamationFill} from 'react-icons/bs';
 
 export default function ServiceBox({icon, title, subtitle}) {
   let getIcon;
 
   switch (icon) {
     case "roller":
-      getIcon = <MdScreenShare size={50} color={"#E52F8A"} />;
+      getIcon = <FaBlogger size={50} color={"#E52F8A"} />;
       break;
     case "monitor":
-      getIcon = <FaNetworkWired size={50} color={"#E52F8A"} />;
+      getIcon = <MdTrackChanges size={50} color={"#E52F8A"} />;
       break;
     case "browser":
-      getIcon = <FaBuilding size={50} color={"#E52F8A"} />;
+      getIcon = <BsFillPatchExclamationFill size={50} color={"#E52F8A"} />;
       break;
     case "printer":
       getIcon = <MdVolunteerActivism size={50} color={"#E52F8A"} />;

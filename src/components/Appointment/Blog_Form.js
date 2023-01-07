@@ -7,7 +7,7 @@ import TopNavbar from "../Nav/TopNavbar";
 import Footer from "../Sections/Footer";
 import "./user.css";
 import { onAuthStateChanged } from "firebase/auth";
-import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 
@@ -56,18 +56,18 @@ const BlogForm = () => {
 			.add(user)
 			.then(() => {
 				toast.success("Blog published!!!");
+				setuser({
+					title: "",
+					text: "",
+					tag: "",
+					Date: new Date().toLocaleDateString(),
+					Time: new Date().toLocaleTimeString(),
+				});
+				navigate("/dashboard");
 			})
 			.catch((err) => {
 				console.log(err);
 			});
-
-		setuser({
-			title: "",
-			text: "",
-			tag: "",
-			Date: new Date().toLocaleDateString(),
-			Time: new Date().toLocaleTimeString(),
-		});
 	};
 
 	return (
@@ -110,11 +110,21 @@ const BlogForm = () => {
 					}}
 				>
 					<Link to={"/dashboard"}>
-					<button style={{padding:"7px 20px" , background:"white" , color:"#E52F8A" , fontWeight:"600" , borderRadius:"10px" , cursor:"pointer"}}> 
-                       <KeyboardBackspaceIcon /> <span style={{marginLeft:"4px"}}>Back</span>
-					</button>
+						<button
+							style={{
+								padding: "7px 20px",
+								background: "white",
+								color: "#E52F8A",
+								fontWeight: "600",
+								borderRadius: "10px",
+								cursor: "pointer",
+							}}
+						>
+							<KeyboardBackspaceIcon />{" "}
+							<span style={{ marginLeft: "4px" }}>Back</span>
+						</button>
 					</Link>
-					<div className="card">
+					<div className="card" style={{ width: "45rem" }}>
 						<div className="card-image1">
 							<h2 className="card-heading">
 								Get start with
