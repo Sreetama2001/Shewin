@@ -88,7 +88,7 @@ export default function TopNavbar() {
 								Blogs
 							</Anc>
 						</li> */}
-						<li>
+						<li className="semiBold font15 pointer hover">
 							<Anc
 								style={{ padding: "10px 15px", color: "black" }}
 								to="/blog" // changing this to projects or health services

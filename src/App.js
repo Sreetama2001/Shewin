@@ -12,6 +12,7 @@ import UserForm from "./components/Appointment/UserForm.js";
 import BlogForm from "./components/Appointment/Blog_Form.js";
 import Blog from "./components/Blog/Blog.jsx";
 import BlogShow from "./components/BlogShow/BlogShow.jsx";
+import DashboardBlogCard from "./components/Sections/DashboardBlogCard.jsx";
 
 export default function App() {
 	return (
@@ -37,6 +38,7 @@ export default function App() {
 					<Route path="/blog" element={<Blog />} />
 					<Route path="/blog/:id" element={<BlogShow />} />
 					<Route path="/blogform" element={<BlogForm />} />
+					<Route path="/dash" element={<DashboardBlogCard />} />
 				</Routes>
 			</BrowserRouter>
 		</>

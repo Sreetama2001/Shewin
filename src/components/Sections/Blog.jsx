@@ -43,10 +43,9 @@ export default function Blog() {
 					<HeaderInfo>
 						<h1 className="font40 extraBold">Our Blog Stories</h1>
 						<p className="font13">
-							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-							nonumy eirmod tempor invidunt ut
+							This is the place where our user aware the community
 							<br />
-							labore et dolore magna aliquyam erat, sed diam voluptua.
+							and contribute in a constructive manner.
 						</p>
 					</HeaderInfo>
 					<div className="row textCenter">
