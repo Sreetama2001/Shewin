@@ -50,9 +50,9 @@ export default function Blog() {
 							<div key={idx+1} className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<BlogBox
 									title={item.title}
-									text={item.text}
+									text={item.text.slice(0,100)}
 									tag={item.tag}
-									author={`${item.name} , ${item.day}`}
+									author={`${item.name} , ${item.Date}`}
 								/>
 							</div>
 						))}
