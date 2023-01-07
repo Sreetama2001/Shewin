@@ -36,7 +36,7 @@ const Dashboard = () => {
 			</Helmet>
 			{/* <!-- Banner --> */}
 			<a
-				href="https://webpixels.io/components?ref=codepen"
+				href="https://donate.stripe.com/test_eVa8xv6m603J4Za148"
 				className="btn w-full btn-primary text-truncate rounded-0 border-0 position-relative"
 				style={{ zIndex: "1000", background: "#E52F8A", marginTop: "0px" }}
 			>

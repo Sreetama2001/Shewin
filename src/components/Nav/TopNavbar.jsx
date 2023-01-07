@@ -86,16 +86,13 @@ export default function TopNavbar() {
 							</Link>
 						</li> */}
 						<li className="semiBold font15 pointer hover">
-							<Link
-								activeclassName="active"
+							<a
 								style={{ padding: "10px 15px" , color:"black" }}
-								to="pricing"
-								spy={true}
-								smooth={true}
-								offset={-80}
+								target="_blank"
+								href="https://donate.stripe.com/test_eVa8xv6m603J4Za148"
 							>
 								Donate
-							</Link>
+							</a>
 						</li>
 						<li className="semiBold font15 pointer hover">
 							<Link

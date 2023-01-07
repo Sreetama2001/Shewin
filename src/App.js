@@ -11,6 +11,7 @@ import Reminder from "./components/reminder/Reminder.jsx";
 import UserForm from "./components/Appointment/UserForm.js";
 import BlogForm from "./components/Appointment/Blog_Form.js";
 import Blog from "./components/Blog/Blog.jsx";
+import BlogShow from "./components/BlogShow/BlogShow.jsx";
 
 export default function App() {
 	return (
@@ -34,6 +35,7 @@ export default function App() {
 					<Route path="/remind" element={<Reminder />} />
 					<Route path="/appointment" element={<UserForm />} />
 					<Route path="/blog" element={<Blog />} />
+					<Route path="/blog/:id" element={<BlogShow />} />
 					<Route path="/blogform" element={<BlogForm />} />
 				</Routes>
 			</BrowserRouter>
