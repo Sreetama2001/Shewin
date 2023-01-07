@@ -53,13 +53,13 @@ export default function Projects() {
 							</Link>
 						</div>
 						<div className="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-							<Link to={"/track"}>
+							<Link to={"/period_cycle"}>
 								<ProjectBox
 									img={
 										"https://img.freepik.com/free-vector/creative-menstrual-calendar-concept-illustrated_23-2148662282.jpg?w=740&t=st=1673051551~exp=1673052151~hmac=cc8dc3c63a9c7145f0fb7e473fb5ccd6ecd8692f5a841a58c8dedd9a689d9db7"
 									}
 									title="Period Tracker"
-									text="Get an complete details of your period cycles, mood swings , diet chart and sleep cycle "
+									text="Get an complete details of your period cycles, mood swings ,diet chart and sleep cycle "
 								/>
 							</Link>
 						</div>
