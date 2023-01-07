@@ -253,7 +253,7 @@ const Dashboard = () => {
 										</div>
 										<div>
 											<span className="d-block text-sm font-semibold">
-												Heather Wright
+												Dr Heather Wright
 											</span>
 											<span className="d-block text-xs text-muted font-regular">
 												London, UK

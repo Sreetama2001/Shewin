@@ -67,7 +67,7 @@ export default function Projects() {
 							<Link to={"/signup"}>
 								<ProjectBox
 									img={
-										"https://img.freepik.com/premium-vector/woman-looks-sadly-positive-pregnancy-test-result-vector_531064-2147.jpg?w=740"
+										"https://img.freepik.com/free-vector/messaging-fun-concept-illustration_114360-1563.jpg?t=st=1673089953~exp=1673090553~hmac=bc161ad549e1ec1594195cc081b58200698d41165d0ab281e5b3a4c2e0262395"
 									}
 									title="Mood Tracker"
 									text="Get an complete details of your period cycles, mood swings , diet chart and sleep cycle "
