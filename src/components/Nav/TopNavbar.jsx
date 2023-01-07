@@ -60,31 +60,46 @@ export default function TopNavbar() {
 							</Link>
 						</li>
 						<li className="semiBold font15 pointer hover">
-							<Anc style={{ padding: "10px 15px" , color:"black" }} to="/blog">
-								Blogs
-							</Anc>
-						</li>
-						<li className="semiBold font15 pointer hover">
-							<Anc
+							<Link
+								activeclassName="active"
 								style={{ padding: "10px 15px", color: "black" }}
-								className="hover"
-								to="/track"
+								spy={true}
+								to="projects" // changing this to projects or health services 
+								smooth={true}
+								offset={-80}
 							>
 								Trackers
-							</Anc>
+							</Link>
 						</li>
-						{/* <li className="semiBold font15 pointer hover">
+						<li className="semiBold font15 pointer hover">
 							<Link
 								activeclassName="active"
 								style={{ padding: "10px 15px" , color:"black" }}
-								to="blog"
+								to="projects"
 								spy={true}
 								smooth={true}
 								offset={-80}
 							>
 								Health
 							</Link>
+						</li>
+						{/* <li className="semiBold font15 pointer hover">
+							<Anc style={{ padding: "10px 15px" , color:"black" }} to="/blog">
+								Blogs
+							</Anc>
 						</li> */}
+						<li>
+						<Link
+							activeclassName="active"
+							style={{ padding: "10px 15px", color: "black" }}
+							spy={true}
+							to="blogs" // changing this to projects or health services 
+							smooth={true}
+							offset={-80}
+							>
+								Blogs
+							</Link>
+						</li>
 						<li className="semiBold font15 pointer hover">
 							<a
 								style={{ padding: "10px 15px" , color:"black" }}
