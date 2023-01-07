@@ -73,96 +73,96 @@ const UserForm = () => {
 					}}
 				/>
 				<div
-					class="container"
+					className="container"
 					style={{
 						background: "#FA4C86",
 						padding: "20px 20px",
 						borderRadius: "15px",
 					}}
 				>
-					<div class="card">
-						<div class="card-image">
-							<h2 class="card-heading">
+					<div className="card">
+						<div className="card-image">
+							<h2 className="card-heading">
 								Get started
 								<small>Let's Book your Appointment</small>
 							</h2>
 						</div>
-						<form class="card-form" onSubmit={handleUserDoc}>   
-							<div class="input">
+						<form className="card-form" onSubmit={handleUserDoc}>   
+							<div className="input">
 								<input
 									type="text"
-									class="input-field"
+									className="input-field"
 									onChange={(e) => {
 										setuser({ ...user, Name: e.target.value });
 									}}
 									required
 								/>
-								<label class="input-label">Full name</label> 
+								<label className="input-label">Full name</label> 
 							</div>
-							<div class="input">
+							<div className="input">
 								<input
 									type="number"
 									min="10"
 									max="60"
-									class="input-field"
+									className="input-field"
 									onChange={(e) => {
 										setuser({ ...user, Age: e.target.value });
 									}}
 									required
 								/>
-								<label class="input-label">Age in years</label>
+								<label className="input-label">Age in years</label>
 							</div>
-							<div class="input">
+							<div className="input">
 								<input
 									type="email"
 									onChange={(e) => {
 										setuser({ ...user, Email: e.target.value });
 									}}
-									class="input-field"
+									className="input-field"
 									required
 								/>
-								<label class="input-label">Email Address</label>
+								<label className="input-label">Email Address</label>
 							</div>
-							<div class="input">
+							<div className="input">
 								<input
 									type="text"
 									onChange={(e) => {
 										setuser({ ...user, Problems: e.target.value });
 									}}
-									class="input-field"
+									className="input-field"
 									required
 								/>
-								<label class="input-label">What's troubling you ?</label>
+								<label className="input-label">What's troubling you ?</label>
 							</div>
-							<div class="input">
+							<div className="input">
 								<input
 									type="date"
 									onChange={(e) => {
 										setuser({ ...user, Date: e.target.value });
 									}}
-									class="input-field"
+									className="input-field"
 									required
 								/>
-								<label class="input-label">Date</label>
+								<label className="input-label">Date</label>
 							</div>
-							<div class="input">
+							<div className="input">
 								<input
 									type="time"
 									onChange={(e) => {
 										setuser({ ...user, Time: e.target.value });
 									}}
-									class="input-field"
+									className="input-field"
 									required
 								/>
-								<label class="input-label">Time</label>
+								<label className="input-label">Time</label>
 							</div>
-							<div class="action">
-								<button class="action-button" type="submit">
+							<div className="action">
+								<button className="action-button" type="submit">
 									Book Your Slot
 								</button>
 							</div>
 						</form>
-						<div class="card-info">
+						<div className="card-info">
 							<p>
 								By signing up you are agreeing to our{" "}
 								<a href="#">Terms and Conditions</a>

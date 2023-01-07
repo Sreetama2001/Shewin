@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
 import { Helmet } from "react-helmet";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import { textAlign } from "@mui/system";
 const Dashboard = () => {
 	const navigate = useNavigate();
+	const [CurrentUser, SetCurrentuser] = useState({});
 
 	const userActivity = () => {
 		onAuthStateChanged(auth, (user) => {
@@ -13,6 +15,7 @@ const Dashboard = () => {
 				// User is signed in, see docs for a list of available properties
 				// https://firebase.google.com/docs/reference/js/firebase.User
 				const uid = user.uid;
+				SetCurrentuser(user);
 				// ...
 			} else {
 				// User is signed out
@@ -29,16 +32,16 @@ const Dashboard = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Shewin | Dashboard</title>
+				<title>{`Shewin | ${CurrentUser?.displayName} Dashboard`}</title>
 			</Helmet>
 			{/* <!-- Banner --> */}
 			<a
 				href="https://webpixels.io/components?ref=codepen"
-				className="btn w-full btn-primary text-truncate rounded-0 py-2 border-0 position-relative"
-				style={{ zIndex: "1000" }}
+				className="btn w-full btn-primary text-truncate rounded-0 border-0 position-relative"
+				style={{ zIndex: "1000", background: "#E52F8A", marginTop: "0px" }}
 			>
-				<strong>Heya Shewinner:</strong> Lets grow better than yesterday. Browse
-				all your capabilities →
+				<strong>Heya Shewinner : : </strong> Let's contribute to the community
+				donate now →
 			</a>
 
 			{/* <!-- Dashboard --> */}
@@ -62,23 +65,31 @@ const Dashboard = () => {
 							<span className="navbar-toggler-icon"></span>
 						</button>
 						{/* <!-- Brand --> */}
-						<a href="#">
+						<div style={{ marginLeft: "10px" }}>
 							<img
 								width={70}
 								height={70}
-								src="https://user-images.githubusercontent.com/86917304/189530487-4f2eba29-9268-4801-9f4f-b2a9b03948a1.png"
+								style={{ borderRadius: "100%", margin: "auto" }}
+								src={
+									CurrentUser.photoURL != null
+										? CurrentUser?.photoURL
+										: "https://user-images.githubusercontent.com/86917304/189530487-4f2eba29-9268-4801-9f4f-b2a9b03948a1.png"
+								}
 								alt="..."
 							/>{" "}
 							<span
 								style={{
-									fontSize: "1.4rem",
+									fontSize: "1.2rem",
 									fontWeight: "700",
-									paddingLeft: "10px",
+									paddingLeft: "50px",
+									marginTop: "20px",
+									color: "#F65AA8",
+									textAlign: "center",
 								}}
 							>
-								Shewin
+								{CurrentUser?.displayName}
 							</span>
-						</a>
+						</div>
 						{/* <!-- User menu (mobile) --> */}
 						<div className="navbar-user d-lg-none">
 							{/* <!-- Dropdown --> */}
@@ -106,17 +117,27 @@ const Dashboard = () => {
 									className="dropdown-menu dropdown-menu-end"
 									aria-labelledby="sidebarAvatar"
 								>
-									<a href="#" className="dropdown-item">
+									<Link to="/dashboard" className="dropdown-item">
+										Home
+									</Link>
+									<Link to="/track" className="dropdown-item">
+										Period Tracker
+									</Link>
+									<Link to="/moodtracker" className="dropdown-item">
+										Mood Tracker
+									</Link>
+									<Link to="/blogform" className="dropdown-item">
+										BLogs
+									</Link>
+									<Link to="/profile" className="dropdown-item">
 										Profile
-									</a>
-									<a href="#" className="dropdown-item">
-										Settings
-									</a>
-									<a href="#" className="dropdown-item">
-										Billing
-									</a>
+									</Link>
 									<hr className="dropdown-divider" />
-									<a href="#" className="dropdown-item">
+									<a
+										href="#"
+										onClick={() => auth.signOut()}
+										className="dropdown-item"
+									>
 										Logout
 									</a>
 								</div>
@@ -127,32 +148,32 @@ const Dashboard = () => {
 							{/* <!-- Navigation --> */}
 							<ul className="navbar-nav">
 								<li className="nav-item">
-									<a className="nav-link" href="#">
-										<i className="bi bi-house"></i> Dashboard
-									</a>
+									<Link className="nav-link" to={"/dashboard"}>
+										<i className="bi bi-house"></i> Home
+									</Link>
 								</li>
 								<li className="nav-item">
-									<a className="nav-link" href="#">
+									<Link className="nav-link" to="/moodtracker">
 										<i className="bi bi-bar-chart"></i> Mood Tracker
-									</a>
+									</Link>
 								</li>
 								<li className="nav-item">
-									<a className="nav-link" href="#">
+									<Link className="nav-link" to={"/blogform"}>
 										<i className="bi bi-chat"></i> Blogs
 										<span className="badge bg-soft-primary text-primary rounded-pill d-inline-flex align-items-center ms-auto">
 											6
 										</span>
-									</a>
+									</Link>
 								</li>
 								<li className="nav-item">
-									<a className="nav-link" href="#">
-										<i className="bi bi-bookmarks"></i> Set Reminder
-									</a>
+									<Link className="nav-link" to="track">
+										<i className="bi bi-bookmarks"></i> Period Tracker
+									</Link>
 								</li>
 								<li className="nav-item">
-									<a className="nav-link" href="#">
+									<Link className="nav-link" to={"/profile"}>
 										<i className="bi bi-people"></i> Profile
-									</a>
+									</Link>
 								</li>
 							</ul>
 							{/* <!-- Divider --> */}
@@ -253,12 +274,13 @@ const Dashboard = () => {
 										<i className="bi bi-person-square"></i> Account
 									</a>
 								</li> */}
-								<li className="nav-item" style={{cursor:"pointer"}} onClick={() => auth.signOut()}>
+								<li
+									className="nav-item"
+									style={{ cursor: "pointer" }}
+									onClick={() => auth.signOut()}
+								>
 									<a className="nav-link" href="#">
-										<i
-											className="bi bi-box-arrow-left"
-										></i>{" "}
-										Logout
+										<i className="bi bi-box-arrow-left"></i> Logout
 									</a>
 								</li>
 							</ul>
@@ -274,40 +296,32 @@ const Dashboard = () => {
 								<div className="row align-items-center">
 									<div className="col-sm-6 col-12 mb-4 mb-sm-0">
 										{/* <!-- Title --> */}
-										<h1 className="h2 mb-0 ls-tight">Application</h1>
+										<h1 className="h2 mb-0 ls-tight" style={{color:"#5C60F5"}}>{`Hello , ${CurrentUser?.displayName?.toLowerCase()}`}</h1>
 									</div>
 									{/* <!-- Actions --> */}
-									{/* <div className="col-sm-6 col-12 text-sm-end">
+									<div className="col-sm-6 col-12 text-sm-end">
 										<div className="mx-n1">
 											<a
 												href="#"
-												className="btn d-inline-flex btn-sm btn-neutral border-base mx-1"
-											>
-												<span className=" pe-2">
-													<i className="bi bi-pencil"></i>
-												</span>
-												<span>Edit</span>
-											</a>
-											<a
-												href="#"
 												className="btn d-inline-flex btn-sm btn-primary mx-1"
+												style={{ background: "#F65AA8", color: "white" , border:"none" }}
 											>
 												<span className=" pe-2">
-													<i className="bi bi-plus"></i>
+													<i className="bi bi-plus" style={{fontSize:"15px"}}></i>
 												</span>
-												<span>Create</span>
+												<span>Create Reminder</span>
 											</a>
 										</div>
-									</div> */}
+									</div>
 								</div>
 								{/* <!-- Nav --> */}
 								<ul className="nav nav-tabs mt-4 overflow-x border-0">
 									<li className="nav-item ">
 										<a href="#" className="nav-link active">
-											All files
+											All Stats
 										</a>
 									</li>
-									<li className="nav-item">
+									{/* <li className="nav-item">
 										<a href="#" className="nav-link font-regular">
 											Shared
 										</a>
@@ -316,7 +330,7 @@ const Dashboard = () => {
 										<a href="#" className="nav-link font-regular">
 											File requests
 										</a>
-									</li>
+									</li> */}
 								</ul>
 							</div>
 						</div>

@@ -22,6 +22,7 @@ export default function App() {
 					href="https://fonts.googleapis.com/css2?family=Khula:wght@400;600;800&display=swap"
 					rel="stylesheet"
 				/>
+				<title>Shewin | We Care She Wins</title>
 			</Helmet>
 			<BrowserRouter>
 				<Routes>

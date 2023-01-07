@@ -25,34 +25,34 @@ const Blog = () => {
 		<>
 			<TopNavbar />
 			<div className="main">
-				<div class="container_i">
+				<div className="container_i">
 					{data.map((item, idx) => (
-						<div class="card" key={idx+1}>
-							<div class="card__header">
+						<div className="card_blog" key={idx+1}>
+							<div className="card__header">
 								<img
 									onClick={() => console.log(data)}
 									src="https://mindindia.org/public/uploads/blog/613f08cf0aaa0_tmpphphkkqhm.jpg"
 									alt="card__image"
-									class="card__image img"
+									className="card__image img"
 									width="600"
 								/>
 							</div>
-							<div class="card__body">
-                                <span class="tag tag-blue">{item.tag}</span>
+							<div className="card__body">
+                                <span className="tag tag-blue">{item.tag}</span>
                                 <h4>{item.title}</h4>
 								<p>
 									{item.text}
 								</p>
 							</div>
-							<div class="card__footer">
-								<div class="user">
+							<div className="card__footer">
+								<div className="user">
 									<img
 										src="https://w7.pngwing.com/pngs/831/88/png-transparent-user-profile-computer-icons-user-interface-mystique-miscellaneous-user-interface-design-smile-thumbnail.png"
                                         alt="user__image"
                                         width={25}
-										class="user__image"
+										className="user__image"
 									/>
-									<div class="user__info">
+									<div className="user__info">
                                         <h5>{item.name}</h5>
                                         <small>{item.date}</small>
 									</div>

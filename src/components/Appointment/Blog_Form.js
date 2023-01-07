@@ -7,7 +7,9 @@ import TopNavbar from "../Nav/TopNavbar";
 import Footer from "../Sections/Footer";
 import "./user.css";
 import { onAuthStateChanged } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
 
 const BlogForm = () => {
 	const navigate = useNavigate();
@@ -72,7 +74,7 @@ const BlogForm = () => {
 		<>
 			<div
 				className="main-user"
-				style={{ paddingTop: "200px", paddingBottom: "100px" }}
+				style={{ paddingTop: "50px", paddingBottom: "50px" }}
 			>
 				<Toaster
 					position="top-center"
@@ -100,57 +102,62 @@ const BlogForm = () => {
 					}}
 				/>
 				<div
-					class="container"
+					className="container"
 					style={{
 						background: "#FA4C86",
 						padding: "20px 20px",
 						borderRadius: "15px",
 					}}
 				>
-					<div class="card">
-						<div class="card-image1">
-							<h2 class="card-heading">
+					<Link to={"/dashboard"}>
+					<button style={{padding:"7px 20px" , background:"white" , color:"#E52F8A" , fontWeight:"600" , borderRadius:"10px" , cursor:"pointer"}}> 
+                       <KeyboardBackspaceIcon /> <span style={{marginLeft:"4px"}}>Back</span>
+					</button>
+					</Link>
+					<div className="card">
+						<div className="card-image1">
+							<h2 className="card-heading">
 								Get start with
 								<small>Write Your First Blog!!</small>
 							</h2>
 						</div>
-						<form class="card-form" onSubmit={handleUserDoc}>
-							<div class="input">
+						<form className="card-form" onSubmit={handleUserDoc}>
+							<div className="input">
 								<input
 									type="text"
-									class="input-field"
+									className="input-field"
 									onChange={(e) => {
 										setuser({ ...user, title: e.target.value });
 									}}
 									required
 								/>
-								<label class="input-label">Title</label>
+								<label className="input-label">Title</label>
 							</div>
-							<div class="input">
+							<div className="input">
 								<textarea
 									rows={2}
 									cols={3}
-									class="input-field"
+									className="input-field"
 									onChange={(e) => {
 										setuser({ ...user, text: e.target.value });
 									}}
 									required
 								/>
-								<label class="input-label">Write your blog</label>
+								<label className="input-label">Write your blog</label>
 							</div>
-							<div class="input">
+							<div className="input">
 								<input
 									type="text"
 									onChange={(e) => {
 										setuser({ ...user, tag: e.target.value });
 									}}
-									class="input-field"
+									className="input-field"
 									required
 								/>
-								<label class="input-label">Write Appropiate Tag's</label>
+								<label className="input-label">Write Appropiate Tag's</label>
 							</div>
-							<div class="action">
-								<button class="action-button" type="submit">
+							<div className="action">
+								<button className="action-button" type="submit">
 									Publish
 								</button>
 							</div>
