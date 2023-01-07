@@ -59,17 +59,17 @@ export default function Services() {
           <div className="container">
             <Advertising className="flexSpaceCenter">
               <AddLeft>
-                <h4 className="font15 semiBold">A few words about company</h4>
-                <h2 className="font40 extraBold">A Study of Creativity</h2>
+                <h4 className="font15 semiBold">Share your stories through us to the world</h4>
+                <h2 className="font40 extraBold">Let's end Period Stigma</h2>
                 <p className="font12">
-                The Woman Company is not just a product company. Founded by the fierce entrepreneurs - Pranshu Jain, this brand has been designed and created to educate/empower/self-stand women about their choices and provide them with solutions for their wellness and needs.
+                Sign Up and start contributing your first own blog on health and hygiene. Here at Shewin we respect privacy so you can opt stay anynomous or privately share the story to us .
                 </p>
                 <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
                   <div style={{ width: "190px" }}>
-                    <FullButton title="Get Started" action={() => alert("clicked")} />
+                    <FullButton title="Share the world" action={() => alert("clicked")} />
                   </div>
                   <div style={{ width: "190px", marginLeft: "15px" }}>
-                    <FullButton title="Contact Us" action={() => alert("clicked")} border />
+                    <FullButton title="Share only to Us" action={() => alert("clicked")} border />
                   </div>
                 </ButtonsRow>
               </AddLeft>
@@ -77,10 +77,10 @@ export default function Services() {
                 <AddRightInner>
                   <div className="flexNullCenter">
                     <AddImgWrapp1 className="flexCenter">
-                      <img src={"https://img.freepik.com/free-vector/people-holding-their-creativity-vector-cute-doodle-icons-set_53876-111621.jpg?w=996&t=st=1662890701~exp=1662891301~hmac=dca03c1f6fc4ead296c80e022a356e94d7dffcc73b693ff790974d3149a3d8c5"} alt="office" />
+                      <img src={"https://user-images.githubusercontent.com/73426684/211125598-97104550-8729-4b70-9eed-292edf632379.jpg"} alt="Stop_the_Stigma" />
                     </AddImgWrapp1>
                     <AddImgWrapp2>
-                      <img src={"https://img.freepik.com/free-vector/designer-tools-idea-concept_98292-4652.jpg?w=740&t=st=1662890815~exp=1662891415~hmac=32187f0d56ca78aca1b4ffebbca153fc12c4cbbbdf39f296f634945996fa757d"} alt="office" />
+                      <img src={"https://img.freepik.com/free-vector/girl-power-reproductive-system-concept_23-2148658188.jpg?w=1060&t=st=1673055245~exp=1673055845~hmac=db1b2a8914e263895b52c5e91dcadd63e91d589d2ef85a9f30061f9b310161a0"} alt="Girl_power" />
                     </AddImgWrapp2>
                   </div>
                   <div className="flexNullCenter">

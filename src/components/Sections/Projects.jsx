@@ -39,7 +39,7 @@ export default function Projects() {
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={"https://media.news9live.com/h-upload/2022/05/28/398835-menstrualhygiene.webp"}
+                img={"https://user-images.githubusercontent.com/73426684/211125553-81fa8184-12de-4874-ba1f-051ab6b7c0ad.jpg"}
                 title="Get PILLs and PADs"
                 text="Get to the nearest medical store for pills or pads"
                 action={() => alert("clicked")}
