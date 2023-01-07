@@ -21,37 +21,37 @@ export default function Services() {
       <div className="whiteBg" style={{ padding: "60px 0" }}>
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Our Awesome Services</h1>
+            <h1 className="font40 extraBold">Our Helpful Services</h1>
             <p className="font13">
-              We are stand out as the complete platform for womens 
+              We are stand out as an integrated platform to provide healthcare solutions for deprived and helpless women around the round 
               <br />
-              All fullfillment at one place.
+              Our platform can be used in several cases and can impact lives of several young girls. 
             </p>
           </HeaderInfo>
           <ServiceBoxRow className="flex">
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="roller"
-                title="She-Showcase"
-                subtitle="Shewin is a platform where you can showcase your best thing to world , We provide you platform with maximum reach and potential customers and help you to grow."
+                title="Blogs on Health & Hygiene"
+                subtitle="Menstrual hygiene is still not discussed openly and many of us feel shy to talk about it, So learn about it from out blogs.You can also contribute your blogs. Check out blogs for more."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="monitor"
-                title="She-Jobs"
-                subtitle="As many startup and new women's enterpeneur list their company on our platform they can post jobs for women's and which eventually made an ecosystem of hiring and growth."
+                title="Mood and Cycle tracker"
+                subtitle="Cycle Tracker provides your 3 month predicted period cycle, So that you can prepare for your period earlier! We provide you a mood analysis and try to control your mood swings by diverting you to memes and jokes. "
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="browser"
-                title="She-NGO's"
-                subtitle="We also encourage NGO's for their as they the main pillar's towards the women empowerment they can list themselves and can find volunteer's for their NGO."
+                title="Get Notified"
+                subtitle="Sometimes we skip our meals , yoga classes or forget drinking water. Here our notifier will send you emails so that you get prior notifications about the them."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
-              <ServiceBox icon="printer" title="Volunteers" subtitle="We provide a filtering system for people who want to volunteer in NGO's , he/she find suitable NGO as per their speciality." />
+              <ServiceBox icon="printer" title="Easy doctor's appointment" subtitle="We use google maps to get the gynaecologist's location incase of severe period pain or other problems. Select the nearest gynae location and book an appointment with a form." />
             </ServiceBoxWrapper>
           </ServiceBoxRow>
         </div>
