@@ -43,14 +43,14 @@ export default function TopNavbar() {
 						<BurgerIcon />
 					</BurderWrapper>
 					<UlWrapper className="flexNullCenter">
-						<li className="semiBold font15 pointer">
-							<Anc style={{ padding: "10px 15px", color: "#525F7F" }} to="/">
+						<li className="semiBold font15 pointer hover">
+							<Anc style={{ padding: "10px 15px" , color:"black"}} to="/">
 								Home
 							</Anc>
 						</li>
-						<li className="semiBold font15 pointer">
+						<li className="semiBold font15 pointer hover">
 							<Link
-								style={{ padding: "10px 15px" }}
+								style={{ padding: "10px 15px" , color:"black" }}
 								to="services"
 								spy={true}
 								smooth={true}
@@ -59,36 +59,48 @@ export default function TopNavbar() {
 								About
 							</Link>
 						</li>
-						<li className="semiBold font15 pointer">
-							<Anc
-								style={{ padding: "10px 15px" }}
-								to="/blog"
-							>
+						<li className="semiBold font15 pointer hover">
+							<Anc style={{ padding: "10px 15px" , color:"black" }} to="/blog">
 								Blogs
 							</Anc>
 						</li>
-						<li className="semiBold font15 pointer">
+						<li className="semiBold font15 pointer hover">
 							<Anc
-								style={{ padding: "10px 15px", color: "#525F7F" }}
+								style={{ padding: "10px 15px", color: "black" }}
+								className="hover"
 								to="/track"
 							>
 								Trackers
 							</Anc>
 						</li>
-						<li className="semiBold font15 pointer">
-              <Link activeclassName="active" style={{ padding: "10px 15px" }} to="blog" spy={true} smooth={true} offset={-80}>
-                Health
-              </Link>
-            </li>
-            <li className="semiBold font15 pointer">
-              <Link activeclassName="active" style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
-                Donate
-              </Link>
-            </li>
-						<li className="semiBold font15 pointer">
+						{/* <li className="semiBold font15 pointer hover">
 							<Link
 								activeclassName="active"
-								style={{ padding: "10px 15px" }}
+								style={{ padding: "10px 15px" , color:"black" }}
+								to="blog"
+								spy={true}
+								smooth={true}
+								offset={-80}
+							>
+								Health
+							</Link>
+						</li> */}
+						<li className="semiBold font15 pointer hover">
+							<Link
+								activeclassName="active"
+								style={{ padding: "10px 15px" , color:"black" }}
+								to="pricing"
+								spy={true}
+								smooth={true}
+								offset={-80}
+							>
+								Donate
+							</Link>
+						</li>
+						<li className="semiBold font15 pointer hover">
+							<Link
+								activeclassName="active"
+								style={{ padding: "10px 15px" , color:"black" }}
 								to="contact"
 								spy={true}
 								smooth={true}
@@ -99,7 +111,7 @@ export default function TopNavbar() {
 						</li>
 					</UlWrapper>
 					<UlWrapperRight className="flexNullCenter">
-						<li className="semiBold font15 pointer">
+						<li className="semiBold font15 pointer hover">
 							<Anc
 								to="/login"
 								style={{
@@ -109,7 +121,7 @@ export default function TopNavbar() {
 								Log in
 							</Anc>
 						</li>
-						<li className="semiBold font15 pointer">
+						<li className="semiBold font15 pointer hover">
 							<Anc
 								to="/signup"
 								style={{
@@ -119,11 +131,11 @@ export default function TopNavbar() {
 								Sign Up
 							</Anc>
 						</li>
-						{/* <li className="semiBold font15 pointer flexCenter">
+						{/* <li className="semiBold font15 pointer hover flexCenter">
 							<a
 								href="/"
 								className="radius8 lightBg"
-								style={{ padding: "10px 15px" }}
+								style={{ padding: "10px 15px" , color:"black" }}
 							>
 								Get Started
 							</a>

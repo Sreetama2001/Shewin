@@ -1,0 +1,63 @@
+.date-day {
+	font-size: large;
+	color: rgba(0, 0, 0, 0.75);
+	font-weight: 500;
+	cursor: pointer;
+}
+.SingleDatePickerInput {
+	background-color: #e8deff;
+}
+.SingleDatePickerInput .DateInput {
+	width: 40px;
+	font-size: x-large;
+	color: black;
+}
+.SingleDatePickerInput .DateInput .DateInput_input {
+	background-color: #e8deff;
+	font-weight: 700;
+	font-size: 20px;
+	color: black;
+	cursor: pointer;
+	padding: 9px;
+}
+.track-button {
+	background-color: #fa4c86 !important;
+}
+.days-count {
+	font-weight: 800;
+	font-size: x-large;
+}
+.DayPicker_transitionContainer {
+	background-color: white !important;
+}
+.CalendarDay__highlighted_calendar {
+	background-color: rgba(255, 0, 0, 0.25) !important;
+	color: black;
+}
+.circle-day {
+	text-align: center;
+	border-radius: 50%;
+	border: 2px solid #e8deff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 23vw;
+	height: 45vh;
+	min-width: 330px;
+	min-height: 10px;
+}
+.circle-day .inner-circle {
+	background-color: #fbd2d7;
+	border-radius: 50%;
+	width: 19vw;
+	height: 40vh;
+	min-width: 300px;
+	min-height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.circle-day .bloodCircle {
+	background-color: #e26058;
+}
