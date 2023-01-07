@@ -64,7 +64,7 @@ export default function TopNavbar() {
 								style={{ padding: "10px 15px" }}
 								to="/blog"
 							>
-								Blog
+								Blogs
 							</Anc>
 						</li>
 						<li className="semiBold font15 pointer">
@@ -72,19 +72,19 @@ export default function TopNavbar() {
 								style={{ padding: "10px 15px", color: "#525F7F" }}
 								to="/track"
 							>
-								Tracker
+								Trackers
 							</Anc>
 						</li>
-						{/* <li className="semiBold font15 pointer">
+						<li className="semiBold font15 pointer">
               <Link activeclassName="active" style={{ padding: "10px 15px" }} to="blog" spy={true} smooth={true} offset={-80}>
-                Volunteer's
+                Health
               </Link>
             </li>
             <li className="semiBold font15 pointer">
               <Link activeclassName="active" style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
-                Job Portal
+                Donate
               </Link>
-            </li> */}
+            </li>
 						<li className="semiBold font15 pointer">
 							<Link
 								activeclassName="active"

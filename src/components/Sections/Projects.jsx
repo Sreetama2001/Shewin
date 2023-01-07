@@ -1,16 +1,19 @@
+// health services section trackers included
+
+
 import React from "react";
 import styled from "styled-components";
 // Components
 import ProjectBox from "../Elements/ProjectBox";
 import FullButton from "../Buttons/FullButton";
 // Assets
-import ProjectImg1 from "../../assets/img/projects/1.png";
-import ProjectImg2 from "../../assets/img/projects/2.png";
-import ProjectImg3 from "../../assets/img/projects/3.png";
-import ProjectImg4 from "../../assets/img/projects/4.png";
-import ProjectImg5 from "../../assets/img/projects/5.png";
-import ProjectImg6 from "../../assets/img/projects/6.png";
-import AddImage2 from "../../assets/img/add/add2.png";
+// import ProjectImg1 from "../../assets/img/projects/1.png";
+// import ProjectImg2 from "../../assets/img/projects/2.png";
+// import ProjectImg3 from "../../assets/img/projects/3.png";
+// import ProjectImg4 from "../../assets/img/projects/4.png";
+// import ProjectImg5 from "../../assets/img/projects/5.png";
+// import ProjectImg6 from "../../assets/img/projects/6.png";
+// import AddImage2 from "../../assets/img/add/add2.png";
 
 export default function Projects() {
   return (
@@ -18,35 +21,35 @@ export default function Projects() {
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Our Projects</h1>
+            <h1 className="font40 extraBold">Health Services for you</h1>
             <p className="font13">
-              We are constantly emerging and finding
+              Period days are never easy. So here's our simple Healthcare to make them less worser
               <br />
-              New ways to encourage women in corporate world.
+              Share your location and get to the nearest doctor's clinic.
             </p>
           </HeaderInfo>
           <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={"https://img.freepik.com/free-vector/hands-holding-red-heart-love-care-family-protect-poster-vector-illustration_1284-2324.jpg?w=740&t=st=1662890216~exp=1662890816~hmac=e8d0ffbac2773b44a4dab27b07ae82590021db118b07423416958bd8aba70e0b"}
-                title="She-Care"
-                text="An initiative in which we help homeless females to live a beautiful life."
+                img={"https://previews.123rf.com/images/artinspiring/artinspiring2003/artinspiring200300513/142303595-young-woman-have-in-vitro-fertilization-treatment-in-fertility-clinic-gynecologist-doctor-take-a-wom.jpg"}
+                title="Get Gynaecologist's care"
+                text="Take an appointment from the nearest gynaecologist"
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={"https://img.freepik.com/free-vector/fingers-pointing-cartoon-businessman-spotlight-hand-holding-flashlight-best-employee-flat-vector-illustration-hr-choice-success-concept-banner-website-design-landing-web-page_74855-24129.jpg?w=740&t=st=1662890418~exp=1662891018~hmac=45cf3cf50a5bbb151bae2bffff29ebcd95bbe631eb5c5e3f272ceea7e60b22bd"}
-                title="She-LimeLite"
-                text="This is the initiative in which we help self-help-groups to reach new height."
+                img={"https://media.news9live.com/h-upload/2022/05/28/398835-menstrualhygiene.webp"}
+                title="Get PILLs and PADs"
+                text="Get to the nearest medical store for pills or pads"
                 action={() => alert("clicked")}
               />
             </div>
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <ProjectBox
-                img={"https://img.freepik.com/free-vector/illustration-light-bulb-icon_53876-43730.jpg?w=740&t=st=1662890308~exp=1662890908~hmac=c682a2deddb052acb133b8318bf3e6576fa44ea9a5c21dcc598e543a5893055b"}
-                title="She-Ideathon"
-                text="An event for college students to pitch their ideas in front of world and showcase their skills."
+                img={"https://img.freepik.com/free-vector/creative-menstrual-calendar-concept-illustrated_23-2148662282.jpg?w=740&t=st=1673051551~exp=1673052151~hmac=cc8dc3c63a9c7145f0fb7e473fb5ccd6ecd8692f5a841a58c8dedd9a689d9db7"}
+                title="Period Trackers"
+                text="Get an complete details of your period cycles, mood swings , diet chart and sleep cycle "
                 action={() => alert("clicked")}
               />
             </div>

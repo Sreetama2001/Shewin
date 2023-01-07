@@ -101,7 +101,9 @@ const UserForm = () => {
 							</div>
 							<div class="input">
 								<input
-									type="text"
+									type="number"
+									min="10"
+									max="60"
 									class="input-field"
 									onChange={(e) => {
 										setuser({ ...user, Age: e.target.value });

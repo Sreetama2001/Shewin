@@ -63,7 +63,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
 						smooth={true}
 						offset={-60}
 					>
-						Tracker
+						Trackers
 					</Anc>
 				</li>
 				<li className="semiBold font15 pointer">

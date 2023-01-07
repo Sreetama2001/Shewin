@@ -164,7 +164,7 @@ const Dashboard = () => {
 										className="nav-link text-xs font-semibold text-uppercase text-muted ls-wide"
 										href="#"
 									>
-										Doctors
+										Gynaecologists
 										<span className="badge bg-soft-primary text-primary rounded-pill d-inline-flex align-items-center ms-4">
 											13
 										</span>
@@ -184,10 +184,10 @@ const Dashboard = () => {
 										</div>
 										<div>
 											<span className="d-block text-sm font-semibold">
-												Marie Claire
+												Dr. Marie Claire
 											</span>
 											<span className="d-block text-xs text-muted font-regular">
-												Paris, FR
+												Dr. Paris, FR
 											</span>
 										</div>
 										<div className="ms-auto">

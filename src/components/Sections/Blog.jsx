@@ -1,3 +1,6 @@
+// section for featuring top 6 blogs
+
+
 import React from "react";
 import styled from "styled-components";
 // Components
