@@ -63,7 +63,7 @@ export default function TopNavbar() {
 								Trackers
 							</Link>
 						</li>
-						<li className="semiBold font15 pointer hover">
+						{/* <li className="semiBold font15 pointer hover">
 							<Link
 								activeclassName="active"
 								style={{ padding: "10px 15px", color: "black" }}
@@ -74,7 +74,7 @@ export default function TopNavbar() {
 							>
 								Health
 							</Link>
-						</li>
+						</li> */}
 						{/* <li className="semiBold font15 pointer hover">
 							<Anc style={{ padding: "10px 15px" , color:"black" }} to="/blog">
 								Blogs
