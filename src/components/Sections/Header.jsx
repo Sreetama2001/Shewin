@@ -12,10 +12,9 @@ export default function Header() {
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
-          <h1 className="extraBold font60">We Are For The Women , Build With Women</h1>
+          <h1 className="extraBold font60">We Care, <br/> She Wins</h1>
           <HeaderP className="font13 semiBold">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+        We here provide healthcare solutions to women. We cover blogs on reproductive health, vaginal Health and hygiene. Our Web app provides a proper menstrual hygiene management which can reduce school dropout and increase women empowerment 
           </HeaderP>
           <BtnWrapper>
             <FullButton title="Get Started" />
@@ -24,16 +23,16 @@ export default function Header() {
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img className="radius8" src={"https://i.pinimg.com/564x/a1/7b/c4/a17bc49ed60016383f3f19eec3770afe.jpg"} alt="office" style={{zIndex: 9}} />
+          <Img className="radius8" src={"https://user-images.githubusercontent.com/73426684/211127930-04c39bb4-df72-4b1b-aa72-358275b49f39.png"} alt="office" style={{zIndex: 9}} />
           <QuoteWrapper className="flexCenter darkBg radius8">
             <QuotesWrapper>
               <QuotesIcon />
             </QuotesWrapper>
             <div>
               <p className="font15 whiteColor">
-                <em>Once you figure out what respect tastes like, it tastes better than attention.</em>
+                <em>Precisely what menstruation is, is not yet very well known.</em>
               </p>
-              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Shewin - CEO</p>
+              <p className="font13 orangeColor textRight" style={{marginTop: '0.5px'}}>G. Stanley Hall</p>
             </div>
           </QuoteWrapper>
           <DotsWrapper>

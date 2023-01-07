@@ -23,7 +23,7 @@ export default function Services() {
           <HeaderInfo>
             <h1 className="font40 extraBold">Our Helpful Services</h1>
             <p className="font13">
-              We are stand out as an integrated platform to provide healthcare solutions for deprived and helpless women around the round 
+              We are stand out as an integrated platform to provide healthcare solutions for deprived and helpless women around the world 
               <br />
               Our platform can be used in several cases and can impact lives of several young girls. 
             </p>
