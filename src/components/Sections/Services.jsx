@@ -77,7 +77,7 @@ export default function Services() {
                 <AddRightInner>
                   <div className="flexNullCenter">
                     <AddImgWrapp1 className="flexCenter">
-                      <img src={"https://user-images.githubusercontent.com/73426684/211125598-97104550-8729-4b70-9eed-292edf632379.jpg"} alt="Stop_the_Stigma" />
+                      <img src={"https://user-images.githubusercontent.com/73426684/211125718-db9bf865-19bc-48cf-ba4d-8ce4772f63ee.jpg"} alt="Stop_the_Stigma" />
                     </AddImgWrapp1>
                     <AddImgWrapp2>
                       <img src={"https://img.freepik.com/free-vector/girl-power-reproductive-system-concept_23-2148658188.jpg?w=1060&t=st=1673055245~exp=1673055845~hmac=db1b2a8914e263895b52c5e91dcadd63e91d589d2ef85a9f30061f9b310161a0"} alt="Girl_power" />
@@ -85,10 +85,10 @@ export default function Services() {
                   </div>
                   <div className="flexNullCenter">
                     <AddImgWrapp3>
-                      <img src={"https://i.pinimg.com/564x/c3/de/f3/c3def31784399783a6be7425adb16245.jpg"} alt="office" />
+                      <img src={"https://i.pinimg.com/564x/84/27/2d/84272de2b92637a1508453cf97d82283.jpg"} alt="Stop_the_Stigma" />
                     </AddImgWrapp3>
                     <AddImgWrapp4>
-                      <img src={"https://i.pinimg.com/564x/84/27/2d/84272de2b92637a1508453cf97d82283.jpg"} alt="office" />
+                      <img src={"https://user-images.githubusercontent.com/73426684/211125598-97104550-8729-4b70-9eed-292edf632379.jpg"} alt="Stop_the_Stigma" />
                     </AddImgWrapp4>
                   </div>
                 </AddRightInner>
