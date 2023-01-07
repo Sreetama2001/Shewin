@@ -2,12 +2,17 @@ import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
 import { Helmet } from "react-helmet";
 import { Link, useNavigate } from "react-router-dom";
-import { auth } from "../../firebase";
+import { auth, db } from "../../firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import { collection, doc } from "firebase/firestore";
 import { textAlign } from "@mui/system";
+import DashboardBlogCard from "../Sections/DashboardBlogCard";
+import Modal from "../Modal/Modal";
+import "../Sections/blogCard.css";
 const Dashboard = () => {
 	const navigate = useNavigate();
 	const [CurrentUser, SetCurrentuser] = useState({});
+	const [openModel, setOpenModel] = useState(false);
 
 	const userActivity = () => {
 		onAuthStateChanged(auth, (user) => {
@@ -24,9 +29,33 @@ const Dashboard = () => {
 			}
 		});
 	};
+	const [blogs, setblogs] = useState([]);
+	const [idarr, setidarr] = useState([]);
+	function getBlogs() {
+		let blog = [];
+		let ids = [];
+		db.collection("blogs")
+			.doc(auth.currentUser?.uid)
+			.collection("blog")
+			.onSnapshot((snapshot) => {
+				snapshot.docs.map((doci) => {
+					ids.push(doci.id);
+					blog.push(doci.data());
+				});
+			});
+		setblogs(blog);
+		setidarr(ids);
+	}
 
 	useEffect(() => {
 		userActivity();
+		getBlogs();
+
+		return () => {
+			setblogs([]);
+			setidarr([]);
+			CurrentUser({});
+		};
 	}, []);
 
 	return (
@@ -36,7 +65,7 @@ const Dashboard = () => {
 			</Helmet>
 			{/* <!-- Banner --> */}
 			<a
-				href="https://webpixels.io/components?ref=codepen"
+				href="https://donate.stripe.com/test_eVa8xv6m603J4Za148"
 				className="btn w-full btn-primary text-truncate rounded-0 border-0 position-relative"
 				style={{ zIndex: "1000", background: "#E52F8A", marginTop: "0px" }}
 			>
@@ -296,21 +325,31 @@ const Dashboard = () => {
 								<div className="row align-items-center">
 									<div className="col-sm-6 col-12 mb-4 mb-sm-0">
 										{/* <!-- Title --> */}
-										<h1 className="h2 mb-0 ls-tight" style={{color:"#5C60F5"}}>{`Hello , ${CurrentUser?.displayName?.toLowerCase()}`}</h1>
+										<h1
+											className="h2 mb-0 ls-tight"
+											style={{ color: "#5C60F5" }}
+										>{`Hello , ${CurrentUser?.displayName?.toLowerCase()}`}</h1>
 									</div>
 									{/* <!-- Actions --> */}
 									<div className="col-sm-6 col-12 text-sm-end">
 										<div className="mx-n1">
-											<a
-												href="#"
+											<button
+												onClick={() => setOpenModel(true)}
 												className="btn d-inline-flex btn-sm btn-primary mx-1"
-												style={{ background: "#F65AA8", color: "white" , border:"none" }}
+												style={{
+													background: "#F65AA8",
+													color: "white",
+													border: "none",
+												}}
 											>
 												<span className=" pe-2">
-													<i className="bi bi-plus" style={{fontSize:"15px"}}></i>
+													<i
+														className="bi bi-plus"
+														style={{ fontSize: "15px" }}
+													></i>
 												</span>
 												<span>Create Reminder</span>
-											</a>
+											</button>
 										</div>
 									</div>
 								</div>
@@ -449,6 +488,25 @@ const Dashboard = () => {
 									</div>
 								</div>
 							</div>
+							{blogs.map((item, idx) => {
+								console.log(item.title);
+								return (
+									<div class="courses-container">
+										<div class="course" style={{ width: "90%" }}>
+											<div class="course-preview">
+												<h6>{item.date}</h6>
+												<h2>{item.title}</h2>
+											</div>
+											<div class="course-info">
+												<div class="progress-container"></div>
+												<h6>{item.text}</h6>
+												<button class="btnii">Delete</button>
+											</div>
+										</div>
+									</div>
+								);
+							})}
+							{openModel && <Modal setOpenModel={setOpenModel} />}
 						</div>
 					</main>
 				</div>

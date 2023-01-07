@@ -1,0 +1,50 @@
+.Model {
+	position: absolute;
+	inset: 0% 0% 0% 0%;
+	background-color: #1e1e1e5a;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+	z-index: 111111111;
+}
+
+.Model_box {
+	background-color: white;
+	padding: 2rem;
+	border-radius: 0.5rem;
+}
+
+.Model_box_heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.Model_box_heading p {
+	font-size: 1.2rem;
+}
+
+.Model_box_wallet p {
+	background-color: #6b6dff;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	color: #1e1e1e;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.Model_box_para {
+	padding: 1rem;
+	line-height: 1.2;
+	color: rgb(255, 82, 82);
+	/* border: 1px solid #6b6dff; */
+	border-radius: 0.5rem;
+}
+
+.inp{
+    border: 1px solid #E52F8A;
+}
+
+

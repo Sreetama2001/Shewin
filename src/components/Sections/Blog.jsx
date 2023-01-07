@@ -12,19 +12,23 @@ import { collection, getDocs } from "firebase/firestore";
 
 export default function Blog() {
 	const [data, setdata] = useState([]);
+	const [idi, setidi] = useState([]);
 	const getData = async () => {
 		let temp = [];
+		let ids = [];
 		let i = 0;
 		const querySnapshot = await getDocs(collection(db, "AllBlogs"));
 		querySnapshot.forEach((doc) => {
 			// doc.data() is never undefined for query doc snapshots
-			if (i < 6) {
+			if (i < 3) {
+				ids.push(doc.id);
 				temp.push(doc.data());
 				i++;
 			} else {
 				return;
 			}
 		});
+		setidi(ids);
 		setdata(temp);
 	};
 
@@ -39,18 +43,21 @@ export default function Blog() {
 					<HeaderInfo>
 						<h1 className="font40 extraBold">Our Blog Stories</h1>
 						<p className="font13">
-							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-							nonumy eirmod tempor invidunt ut
+							This is the place where our user aware the community
 							<br />
-							labore et dolore magna aliquyam erat, sed diam voluptua.
+							and contribute in a constructive manner.
 						</p>
 					</HeaderInfo>
 					<div className="row textCenter">
-						{data.map((item,idx) => (
-							<div key={idx+1} className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						{data.map((item, idx) => (
+							<div
+								key={idx + 1}
+								className="col-xs-12 col-sm-4 col-md-4 col-lg-4"
+							>
 								<BlogBox
+									id={idi[idx]}
 									title={item.title}
-									text={item.text.slice(0,100)}
+									text={item.text.slice(0, 100)}
 									tag={item.tag}
 									author={`${item.name} , ${item.Date}`}
 								/>
