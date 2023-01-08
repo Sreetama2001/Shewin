@@ -66,7 +66,7 @@ const NearClinic = () => {
 
 	return (
 		<div className="clinic">
-			<h1>Maps</h1>
+			{/* <h1>Maps</h1> */}
 			{/* // Important! Always set the container height explicitly */}
 			{/* <div style={{ height: "90vh", width: "100%" }}>
 				<GoogleMapReact
@@ -79,6 +79,7 @@ const NearClinic = () => {
 			{/* <!-- Banner --> */}
 			<a
 				href="https://donate.stripe.com/test_eVa8xv6m603J4Za148"
+				target={"_blank"}
 				className="btn w-full btn-primary text-truncate rounded-0 border-0 position-relative"
 				style={{ zIndex: "1000", background: "#E52F8A", marginTop: "0px" }}
 			>
@@ -403,7 +404,12 @@ const NearClinic = () => {
 								height="900"
 								allowfullscreen
 							></iframe> */}
-							<iframe src={`https://maps.google.com/maps?ll=${location}&q=pharmacy&amp;&z=13&amp;ie=UTF8&amp;iwloc=&amp;&output=embed`} width="100%" height="900" allowfullscreen></iframe>
+							<iframe
+								src={`https://maps.google.com/maps?ll=${location}&q=pharmacy&amp;&z=13&amp;ie=UTF8&amp;iwloc=&amp;&output=embed`}
+								width="100%"
+								height="900"
+								allowfullscreen
+							></iframe>
 						</div>
 					</main>
 				</div>

@@ -84,7 +84,7 @@ const NearHospital = () => {
 
 	return (
 		<div className="clinic">
-			<h1>Maps</h1>
+			{/* <h1>Maps</h1> */}
 			{/* // Important! Always set the container height explicitly */}
 			{/* <div style={{ height: "90vh", width: "100%" }}>
 				<GoogleMapReact
@@ -97,6 +97,7 @@ const NearHospital = () => {
 			{/* <!-- Banner --> */}
 			<a
 				href="https://donate.stripe.com/test_eVa8xv6m603J4Za148"
+				target={"_blank"}
 				className="btn w-full btn-primary text-truncate rounded-0 border-0 position-relative"
 				style={{ zIndex: "1000", background: "#E52F8A", marginTop: "0px" }}
 			>
