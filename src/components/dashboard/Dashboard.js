@@ -440,7 +440,7 @@ const Dashboard = () => {
 											</div>
 											<div className="mt-2 mb-0 text-sm">
 												<span className="badge badge-pill bg-soft-success text-success me-2">
-													<i className="bi bi-arrow-up me-1"></i>30%
+													<i className="bi bi-arrow-up me-1"></i>2
 												</span>
 												<span className="text-nowrap text-xs text-muted">
 													Since last month
@@ -457,7 +457,7 @@ const Dashboard = () => {
 													<span className="h6 font-semibold text-muted text-sm d-block mb-2">
 														Yoga Stats
 													</span>
-													<span className="h3 font-bold mb-0">1.400</span>
+													<span className="h3 font-bold mb-0">2 Days</span>
 												</div>
 												<div className="col-auto">
 													<div className="icon icon-shape bg-info text-white text-lg rounded-circle">
@@ -484,7 +484,7 @@ const Dashboard = () => {
 													<span className="h6 font-semibold text-muted text-sm d-block mb-2">
 														Upcoming Period
 													</span>
-													<span className="h3 font-bold mb-0">95%</span>
+													<span className="h3 font-bold mb-0">25</span>
 												</div>
 												<div className="col-auto">
 													<div className="icon icon-shape bg-warning text-white text-lg rounded-circle">
