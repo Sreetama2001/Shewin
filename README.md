@@ -1,4 +1,4 @@
-# Shewins
+<h1 align="center">Shewin</h1>
 
 <div align="center">
   <a id="top" href="" target="blank">
@@ -90,13 +90,18 @@ _Below is an example of how you can instruct your audience on installing and set
 ![image](https://user-images.githubusercontent.com/86917304/211189642-7d5a2888-8076-488d-82cb-ed66d0be3872.png)
 
 
-## **Fill out the details as such your gender and age**
+## **Blogs Section**
+Here we list all the blogs published by all the shewinners to aware the society, share their experience and share their knowledge. This will come up as the platform where their is exchange of ideas.
 
-![Welcome](./images/welcome_page.jpg)
+![image](https://user-images.githubusercontent.com/86917304/211190535-d7ca9136-b8e0-4dd8-b5ea-b57fda5d996c.png)
 
 
 
-## **Fill in all necessary information to track  your previous history of illness**
+## **Appoinment Form**
+This is the form , using this form user can book their appointment with their consultant and get the personalized feedback and treatment.
+
+![image](https://user-images.githubusercontent.com/86917304/211190727-0b390c44-3d24-48cd-a8dd-a3eb4bc66766.png)
+
 
 
 
