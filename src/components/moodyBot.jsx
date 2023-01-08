@@ -99,7 +99,6 @@ const MoodyBot = () => {
 
 	return (
 		<div className="clinic">
-			<h1>Maps</h1>
 			{/* // Important! Always set the container height explicitly */}
 			{/* <div style={{ height: "90vh", width: "100%" }}>
 				<GoogleMapReact
@@ -258,6 +257,11 @@ const MoodyBot = () => {
 									<Link className="nav-link" to={"/nearhospital"}>
 										<i className="bi bi-file-medical"></i> Nearest
 										Hospital
+									</Link>
+								</li>
+								<li className="nav-item">
+									<Link className="nav-link" to={"/moodybot"}>
+										<i className="bi bi-emoji-smile"></i> Moody Bot
 									</Link>
 								</li>
 							</ul>
@@ -443,7 +447,6 @@ const MoodyBot = () => {
 					{/* <!-- Main --> */}
 					<main className="py-6 bg-surface-secondary">
 						<div className="container-fluid">
-						
 							<header className="header">Wecare Fun Bot</header>
 							<div className="chatbot">
 								<Messages messages={messages} />
@@ -456,6 +459,5 @@ const MoodyBot = () => {
 		</div>
 	);
 };
-
 
 export default MoodyBot;

@@ -37,7 +37,9 @@ const NearHospital = () => {
 			console.log(position.coords);
 			console.log(position.coords.latitude);
 			console.log(position.coords.longitude);
-			setLocation(`${position.coords.latitude},${position.coords.longitude}`);
+			setLocation(
+				`${position.coords.latitude},${position.coords.longitude}`
+			);
 		}
 	}
 
@@ -84,7 +86,6 @@ const NearHospital = () => {
 
 	return (
 		<div className="clinic">
-			{/* <h1>Maps</h1> */}
 			{/* // Important! Always set the container height explicitly */}
 			{/* <div style={{ height: "90vh", width: "100%" }}>
 				<GoogleMapReact
@@ -101,8 +102,8 @@ const NearHospital = () => {
 				className="btn w-full btn-primary text-truncate rounded-0 border-0 position-relative"
 				style={{ zIndex: "1000", background: "#E52F8A", marginTop: "0px" }}
 			>
-				<strong>Heya Shewinner : : </strong> Let's contribute to the community
-				donate now →
+				<strong>Heya Shewinner : : </strong> Let's contribute to the
+				community donate now →
 			</a>
 
 			{/* <!-- Dashboard --> */}
@@ -205,7 +206,10 @@ const NearHospital = () => {
 							</div>
 						</div>
 						{/* <!-- Collapse --> */}
-						<div className="collapse navbar-collapse" id="sidebarCollapse">
+						<div
+							className="collapse navbar-collapse"
+							id="sidebarCollapse"
+						>
 							{/* <!-- Navigation --> */}
 							<ul className="navbar-nav">
 								<li className="nav-item">
@@ -233,12 +237,19 @@ const NearHospital = () => {
 								</li>
 								<li className="nav-item">
 									<Link className="nav-link" to={"/nearclinic"}>
-										<i className="bi bi-cart-plus"></i> Nearest Pharmacy
+										<i className="bi bi-cart-plus"></i> Nearest
+										Pharmacy
 									</Link>
 								</li>
 								<li className="nav-item">
 									<Link className="nav-link" to={"/nearhospital"}>
-										<i className="bi bi-file-medical"></i> Nearest Hospital
+										<i className="bi bi-file-medical"></i> Nearest
+										Hospital
+									</Link>
+								</li>
+								<li className="nav-item">
+									<Link className="nav-link" to={"/moodybot"}>
+										<i className="bi bi-emoji-smile"></i> Moody Bot
 									</Link>
 								</li>
 							</ul>
@@ -259,7 +270,10 @@ const NearHospital = () => {
 									</div>
 								</li>
 								<li>
-									<a href="#" className="nav-link d-flex align-items-center">
+									<a
+										href="#"
+										className="nav-link d-flex align-items-center"
+									>
 										<div className="me-4">
 											<div className="position-relative d-inline-block text-white">
 												<img
@@ -284,7 +298,10 @@ const NearHospital = () => {
 									</a>
 								</li>
 								<li>
-									<a href="#" className="nav-link d-flex align-items-center">
+									<a
+										href="#"
+										className="nav-link d-flex align-items-center"
+									>
 										<div className="me-4">
 											<div className="position-relative d-inline-block text-white">
 												<span className="avatar bg-soft-warning text-warning rounded-circle">
@@ -307,7 +324,10 @@ const NearHospital = () => {
 									</a>
 								</li>
 								<li>
-									<a href="#" className="nav-link d-flex align-items-center">
+									<a
+										href="#"
+										className="nav-link d-flex align-items-center"
+									>
 										<div className="me-4">
 											<div className="position-relative d-inline-block text-white">
 												<img

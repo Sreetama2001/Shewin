@@ -216,7 +216,7 @@ const Dashboard = () => {
 								</li>
 								<li className="nav-item">
 									<Link className="nav-link" to={"/moodybot"}>
-										<i className="bi bi-file-medical"></i> Moody Bot
+										<i className="bi bi-emoji-smile"></i> Moody Bot
 									</Link>
 								</li>
 							</ul>
