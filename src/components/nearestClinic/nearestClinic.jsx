@@ -1,5 +1,7 @@
+import GoogleMapReact from "google-map-react";
+import axios from "axios";
 import React, { useEffect, useState } from "react";
-import "./Dashboard.css";
+import "../dashboard/Dashboard.css";
 import { Helmet } from "react-helmet";
 import { Link, useNavigate } from "react-router-dom";
 import { auth, db } from "../../firebase";
@@ -9,9 +11,29 @@ import { textAlign } from "@mui/system";
 import DashboardBlogCard from "../Sections/DashboardBlogCard";
 import Modal from "../Modal/Modal";
 import "../Sections/blogCard.css";
-import { MdLocalHospital } from 'react-icons/md';
 
-const Dashboard = () => {
+const NearClinic = () => {
+	const [location, setLocation] = useState("");
+
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+			console.log("Location Found");
+		} else {
+			console.log("Error");
+		}
+	}
+
+	function showPosition(position) {
+		if (position) {
+			console.log(position);
+			console.log(position.coords);
+			console.log(position.coords.latitude);
+			console.log(position.coords.longitude);
+			setLocation(`${position.coords.latitude},${position.coords.longitude}`);
+		}
+	}
+
 	const navigate = useNavigate();
 	const [CurrentUser, SetCurrentuser] = useState({});
 	const [openModel, setOpenModel] = useState(false);
@@ -34,37 +56,26 @@ const Dashboard = () => {
 			}
 		});
 	};
-	function getBlogs() {
-		let blog = [];
-		let ids = [];
-		db.collection("blogs")
-			.doc(auth.currentUser?.uid)
-			.collection("blog")
-			.onSnapshot((snapshot) => {
-				snapshot.docs.map((doci) => {
-					ids.push(doci.id);
-					// console.log(doci.id, doci.data());
-					blog.push(doci.data());
-				});
-			});
-		setsize(blog.length);
-		setblogs(blog);
-		setidarr(ids);
-	}
-
-
 	useEffect(() => {
 		userActivity();
+		getLocation();
 		return () => {
 			SetCurrentuser({});
 		};
 	}, []);
 
 	return (
-		<>
-			<Helmet>
-				<title>{`Shewin | ${CurrentUser?.displayName} Dashboard`}</title>
-			</Helmet>
+		<div className="clinic">
+			<h1>Maps</h1>
+			{/* // Important! Always set the container height explicitly */}
+			{/* <div style={{ height: "90vh", width: "100%" }}>
+				<GoogleMapReact
+					bootstrapURLKeys={{ key: "AIzaSyC1mpaHajUPWU696t2u2xboKThZC-lRnnA" }}
+					defaultCenter={defaultProps.center}
+					defaultZoom={defaultProps.zoom}
+				></GoogleMapReact>
+			</div> */}
+
 			{/* <!-- Banner --> */}
 			<a
 				href="https://donate.stripe.com/test_eVa8xv6m603J4Za148"
@@ -365,7 +376,7 @@ const Dashboard = () => {
 								<ul className="nav nav-tabs mt-4 overflow-x border-0">
 									<li className="nav-item ">
 										<a href="#" className="nav-link active">
-											All Stats
+											Nearest Phramacy
 										</a>
 									</li>
 									{/* <li className="nav-item">
@@ -380,132 +391,25 @@ const Dashboard = () => {
 									</li> */}
 								</ul>
 							</div>
+							{openModel && <Modal setOpenModel={setOpenModel} />}
 						</div>
 					</header>
 					{/* <!-- Main --> */}
 					<main className="py-6 bg-surface-secondary">
 						<div className="container-fluid">
-							{/* <!-- Card stats --> */}
-							<div className="row g-6 mb-6">
-								<div className="col-xl-3 col-sm-6 col-12">
-									<div className="card shadow border-0">
-										<div className="card-body">
-											<div className="row">
-												<div className="col">
-													<span className="h6 font-semibold text-muted text-sm d-block mb-2">
-														Sleeping Stats
-													</span>
-													<span className="h3 font-bold mb-0">5 Days</span>
-												</div>
-												<div className="col-auto">
-													<div className="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
-														<i className="bi bi-credit-card"></i>
-													</div>
-												</div>
-											</div>
-											<div className="mt-2 mb-0 text-sm">
-												<span className="badge badge-pill bg-soft-success text-success me-2">
-													<i className="bi bi-arrow-up me-1"></i>13%
-												</span>
-												<span className="text-nowrap text-xs text-muted">
-													Since last month
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="col-xl-3 col-sm-6 col-12">
-									<div className="card shadow border-0">
-										<div className="card-body">
-											<div className="row">
-												<div className="col">
-													<span className="h6 font-semibold text-muted text-sm d-block mb-2">
-														Blog Published
-													</span>
-													<span className="h3 font-bold mb-0">
-														{size}
-													</span>
-												</div>
-												<div className="col-auto">
-													<div className="icon icon-shape bg-primary text-white text-lg rounded-circle">
-														<i className="bi bi-people"></i>
-													</div>
-												</div>
-											</div>
-											<div className="mt-2 mb-0 text-sm">
-												<span className="badge badge-pill bg-soft-success text-success me-2">
-													<i className="bi bi-arrow-up me-1"></i>30%
-												</span>
-												<span className="text-nowrap text-xs text-muted">
-													Since last month
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="col-xl-3 col-sm-6 col-12">
-									<div className="card shadow border-0">
-										<div className="card-body">
-											<div className="row">
-												<div className="col">
-													<span className="h6 font-semibold text-muted text-sm d-block mb-2">
-														Yoga Stats
-													</span>
-													<span className="h3 font-bold mb-0">1.400</span>
-												</div>
-												<div className="col-auto">
-													<div className="icon icon-shape bg-info text-white text-lg rounded-circle">
-														<i className="bi bi-clock-history"></i>
-													</div>
-												</div>
-											</div>
-											<div className="mt-2 mb-0 text-sm">
-												<span className="badge badge-pill bg-soft-danger text-danger me-2">
-													<i className="bi bi-arrow-down me-1"></i>-5%
-												</span>
-												<span className="text-nowrap text-xs text-muted">
-													Since last month
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="col-xl-3 col-sm-6 col-12">
-									<div className="card shadow border-0">
-										<div className="card-body">
-											<div className="row">
-												<div className="col">
-													<span className="h6 font-semibold text-muted text-sm d-block mb-2">
-														Upcoming Period
-													</span>
-													<span className="h3 font-bold mb-0">95%</span>
-												</div>
-												<div className="col-auto">
-													<div className="icon icon-shape bg-warning text-white text-lg rounded-circle">
-														<i className="bi bi-minecart-loaded"></i>
-													</div>
-												</div>
-											</div>
-											<div className="mt-2 mb-0 text-sm">
-												<span className="badge badge-pill bg-soft-success text-success me-2">
-													<i className="bi bi-arrow-up me-1"></i>10%
-												</span>
-												<span className="text-nowrap text-xs text-muted">
-													Since last month
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							{openModel && <Modal setOpenModel={setOpenModel} />}
-							<DashboardBlogCard setsize={setsize} />
+							{/* <iframe
+								src={`https://maps.google.com/maps?ll=${location}&q=pharmacy&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;&output=embed`}
+								width="100%"
+								height="900"
+								allowfullscreen
+							></iframe> */}
+							<iframe src={`https://maps.google.com/maps?ll=${location}&q=pharmacy&amp;&z=13&amp;ie=UTF8&amp;iwloc=&amp;&output=embed`} width="100%" height="900" allowfullscreen></iframe>
 						</div>
 					</main>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 
-export default Dashboard;
+export default NearClinic;
