@@ -31,6 +31,7 @@ const [location, setLocation] = useState({});
   }
 
   useEffect(() => {
+    getLocation();
     // if (location) {
     //   console.log(location);
     // }
@@ -41,10 +42,6 @@ const [location, setLocation] = useState({});
     //     console.log(location.coords.latitude);
     //     console.log(location.coords.longitude);
     // }
-    setTimeout(() => {
-        getLocation();
-    }, 2500);
-    
 }, []);
 
   

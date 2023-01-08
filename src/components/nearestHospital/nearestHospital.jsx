@@ -16,55 +16,7 @@ import Modal from "../Modal/Modal";
 import "../Sections/blogCard.css";
 
 
-const NearClinic = () => {
-
-const [location, setLocation] = useState({});
-
-  function getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-      console.log("Location Found");
-      
-    } else {
-      console.log("Error");
-    }
-  }
-
-  useEffect(() => {
-    // if (location) {
-    //   console.log(location);
-    // }
-    // if (location.coords) {
-    //   console.log(location.coords);
-    // }
-    // if (location.coords.latitude) {
-    //     console.log(location.coords.latitude);
-    //     console.log(location.coords.longitude);
-    // }
-    setTimeout(() => {
-        getLocation();
-    }, 2500);
-    
-}, []);
-
-  
-  function showPosition(position) {
-    if (position) {
-        console.log(position);
-        console.log(position.coords);
-        console.log(position.coords.latitude);
-        console.log(position.coords.longitude);
-
-        // setLocation({
-        //     latitude: position.coords.latitude,
-        //     longitude: position.coords.longitude
-        //     });
-    }
-  }
-
-
-
-
+const NearHospital = () => {
 
 
       const navigate = useNavigate();
@@ -110,7 +62,6 @@ const [location, setLocation] = useState({});
 
 	useEffect(() => {
 		userActivity();
-        // getLocation();
 		return () => {
 			SetCurrentuser({});
 		};
@@ -431,7 +382,7 @@ const [location, setLocation] = useState({});
 								<ul className="nav nav-tabs mt-4 overflow-x border-0">
 									<li className="nav-item ">
 										<a href="#" className="nav-link active">
-											Nearest Phramacy
+											Nearest Hospitals
 										</a>
 									</li>
 									{/* <li className="nav-item">
@@ -451,7 +402,7 @@ const [location, setLocation] = useState({});
 					{/* <!-- Main --> */}
 					<main className="py-6 bg-surface-secondary">
 						<div className="container-fluid">
-                        <iframe src="https://maps.google.com/maps?ll=${position.coords.latitude},${position.coords.longitude}&q=pharmacy&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="900" allowfullscreen ></iframe>
+                        <iframe src="https://maps.google.com/maps?ll=18.472329,73.912398&q=hospitals&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="900" allowfullscreen ></iframe>
 
 						</div>
 					</main>
@@ -461,4 +412,4 @@ const [location, setLocation] = useState({});
 	);
 };
 
-export default NearClinic;
+export default NearHospital;

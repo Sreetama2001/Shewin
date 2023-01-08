@@ -9,6 +9,8 @@ import { textAlign } from "@mui/system";
 import DashboardBlogCard from "../Sections/DashboardBlogCard";
 import Modal from "../Modal/Modal";
 import "../Sections/blogCard.css";
+import { MdLocalHospital } from 'react-icons/md';
+
 const Dashboard = () => {
 	const navigate = useNavigate();
 	const [CurrentUser, SetCurrentuser] = useState({});
@@ -195,15 +197,20 @@ const Dashboard = () => {
 									</Link>
 								</li>
 								<li className="nav-item">
-									<Link className="nav-link" to="track">
+									<Link className="nav-link" to="/track">
 										<i className="bi bi-bookmarks"></i> Period Tracker
 									</Link>
 								</li>
-								{/* <li className="nav-item">
-									<Link className="nav-link" to={"/profile"}>
-										<i className="bi bi-people"></i> Profile
+								<li className="nav-item">
+									<Link className="nav-link" to={"/nearclinic"}>
+										<i className="bi bi-cart-plus"></i> Nearest Pharmacy
 									</Link>
-								</li> */}
+								</li>
+								<li className="nav-item">
+									<Link className="nav-link" to={"/nearhospital"}>
+										<i className="bi bi-file-medical"></i> Nearest Hospital
+									</Link>
+								</li>
 							</ul>
 							{/* <!-- Divider --> */}
 							<hr className="navbar-divider my-5 opacity-20" />
