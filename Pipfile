@@ -9,6 +9,7 @@ pydantic = "*"
 matplotlib = "*"
 numpy = "*"
 sklearn = "*"
+nltk = "*"
 
 [dev-packages]
 
