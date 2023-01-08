@@ -211,6 +211,11 @@ const Dashboard = () => {
 										<i className="bi bi-file-medical"></i> Nearest Hospital
 									</Link>
 								</li>
+								<li className="nav-item">
+									<Link className="nav-link" to={"/moodybot"}>
+										<i className="bi bi-file-medical"></i> Moody Bot
+									</Link>
+								</li>
 							</ul>
 							{/* <!-- Divider --> */}
 							<hr className="navbar-divider my-5 opacity-20" />

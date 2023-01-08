@@ -1,70 +1,31 @@
-import GoogleMapReact from 'google-map-react';
-import axios from 'axios';
+import GoogleMapReact from "google-map-react";
+import axios from "axios";
 
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
 
+import Messages from "./moodyBot/Messages";
+import BotMessage from "./moodyBot/BotMessage";
+import UserMessage from "./moodyBot/UserMessage";
+import Input from "./moodyBot/Input";
 
-import React, { useEffect, useState } from "react";
-import "../dashboard/Dashboard.css";
+import API from "../ChatbotAPI";
+
+// import "../assets/scss/components/chatbot.scss"
+
+import "./dashboard/Dashboard.css";
 import { Helmet } from "react-helmet";
 import { Link, useNavigate } from "react-router-dom";
-import { auth, db } from "../../firebase";
+import { auth, db } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { collection, doc } from "firebase/firestore";
 import { textAlign } from "@mui/system";
-import DashboardBlogCard from "../Sections/DashboardBlogCard";
-import Modal from "../Modal/Modal";
-import "../Sections/blogCard.css";
+import DashboardBlogCard from "./Sections/DashboardBlogCard";
+import Modal from "./Modal/Modal";
+import "./Sections/blogCard.css";
 
-
-const NearClinic = () => {
-
-const [location, setLocation] = useState({});
-
-  function getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-      console.log("Location Found");
-      
-    } else {
-      console.log("Error");
-    }
-  }
-
-  useEffect(() => {
-    getLocation();
-    // if (location) {
-    //   console.log(location);
-    // }
-    // if (location.coords) {
-    //   console.log(location.coords);
-    // }
-    // if (location.coords.latitude) {
-    //     console.log(location.coords.latitude);
-    //     console.log(location.coords.longitude);
-    // }
-}, []);
-
-  
-  function showPosition(position) {
-    if (position) {
-        console.log(position);
-        console.log(position.coords);
-        console.log(position.coords.latitude);
-        console.log(position.coords.longitude);
-
-        // setLocation({
-        //     latitude: position.coords.latitude,
-        //     longitude: position.coords.longitude
-        //     });
-    }
-  }
-
-
-
-
-
-
-      const navigate = useNavigate();
+const MoodyBot = () => {
+	const navigate = useNavigate();
 	const [CurrentUser, SetCurrentuser] = useState({});
 	const [openModel, setOpenModel] = useState(false);
 	const [blogs, setblogs] = useState([]);
@@ -104,17 +65,37 @@ const [location, setLocation] = useState({});
 		setidarr(ids);
 	}
 
-
 	useEffect(() => {
 		userActivity();
-        // getLocation();
 		return () => {
 			SetCurrentuser({});
 		};
 	}, []);
 
-      
+	const [messages, setMessages] = useState([]);
 
+	useEffect(() => {
+		async function loadWelcomeMessage() {
+			setMessages([
+				<BotMessage
+					key="0"
+					fetchMessage={async () => await API.GetChatbotResponse("hi")}
+				/>,
+			]);
+		}
+		loadWelcomeMessage();
+	}, []);
+
+	const send = async (text) => {
+		const newMessages = messages.concat(
+			<UserMessage key={messages.length + 1} text={text} />,
+			<BotMessage
+				key={messages.length + 2}
+				fetchMessage={async () => await API.GetChatbotResponse(text)}
+			/>
+		);
+		setMessages(newMessages);
+	};
 
 	return (
 		<div className="clinic">
@@ -127,15 +108,15 @@ const [location, setLocation] = useState({});
 					defaultZoom={defaultProps.zoom}
 				></GoogleMapReact>
 			</div> */}
-           
+
 			{/* <!-- Banner --> */}
 			<a
 				href="https://donate.stripe.com/test_eVa8xv6m603J4Za148"
 				className="btn w-full btn-primary text-truncate rounded-0 border-0 position-relative"
 				style={{ zIndex: "1000", background: "#E52F8A", marginTop: "0px" }}
 			>
-				<strong>Heya Shewinner : : </strong> Let's contribute to the community
-				donate now →
+				<strong>Heya Shewinner : : </strong> Let's contribute to the
+				community donate now →
 			</a>
 
 			{/* <!-- Dashboard --> */}
@@ -238,7 +219,10 @@ const [location, setLocation] = useState({});
 							</div>
 						</div>
 						{/* <!-- Collapse --> */}
-						<div className="collapse navbar-collapse" id="sidebarCollapse">
+						<div
+							className="collapse navbar-collapse"
+							id="sidebarCollapse"
+						>
 							{/* <!-- Navigation --> */}
 							<ul className="navbar-nav">
 								<li className="nav-item">
@@ -266,12 +250,14 @@ const [location, setLocation] = useState({});
 								</li>
 								<li className="nav-item">
 									<Link className="nav-link" to={"/nearclinic"}>
-										<i className="bi bi-cart-plus"></i> Nearest Pharmacy
+										<i className="bi bi-cart-plus"></i> Nearest
+										Pharmacy
 									</Link>
 								</li>
 								<li className="nav-item">
 									<Link className="nav-link" to={"/nearhospital"}>
-										<i className="bi bi-file-medical"></i> Nearest Hospital
+										<i className="bi bi-file-medical"></i> Nearest
+										Hospital
 									</Link>
 								</li>
 							</ul>
@@ -292,7 +278,10 @@ const [location, setLocation] = useState({});
 									</div>
 								</li>
 								<li>
-									<a href="#" className="nav-link d-flex align-items-center">
+									<a
+										href="#"
+										className="nav-link d-flex align-items-center"
+									>
 										<div className="me-4">
 											<div className="position-relative d-inline-block text-white">
 												<img
@@ -317,7 +306,10 @@ const [location, setLocation] = useState({});
 									</a>
 								</li>
 								<li>
-									<a href="#" className="nav-link d-flex align-items-center">
+									<a
+										href="#"
+										className="nav-link d-flex align-items-center"
+									>
 										<div className="me-4">
 											<div className="position-relative d-inline-block text-white">
 												<span className="avatar bg-soft-warning text-warning rounded-circle">
@@ -340,7 +332,10 @@ const [location, setLocation] = useState({});
 									</a>
 								</li>
 								<li>
-									<a href="#" className="nav-link d-flex align-items-center">
+									<a
+										href="#"
+										className="nav-link d-flex align-items-center"
+									>
 										<div className="me-4">
 											<div className="position-relative d-inline-block text-white">
 												<img
@@ -428,7 +423,7 @@ const [location, setLocation] = useState({});
 								<ul className="nav nav-tabs mt-4 overflow-x border-0">
 									<li className="nav-item ">
 										<a href="#" className="nav-link active">
-											Nearest Phramacy
+											Nearest Hospitals
 										</a>
 									</li>
 									{/* <li className="nav-item">
@@ -448,8 +443,12 @@ const [location, setLocation] = useState({});
 					{/* <!-- Main --> */}
 					<main className="py-6 bg-surface-secondary">
 						<div className="container-fluid">
-                        <iframe src="https://maps.google.com/maps?ll=${position.coords.latitude},${position.coords.longitude}&q=pharmacy&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="900" allowfullscreen ></iframe>
-
+						
+							<header className="header">Wecare Fun Bot</header>
+							<div className="chatbot">
+								<Messages messages={messages} />
+								<Input onSend={send} />
+							</div>
 						</div>
 					</main>
 				</div>
@@ -458,4 +457,5 @@ const [location, setLocation] = useState({});
 	);
 };
 
-export default NearClinic;
+
+export default MoodyBot;

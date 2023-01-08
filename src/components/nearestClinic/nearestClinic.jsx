@@ -1,8 +1,5 @@
-import GoogleMapReact from 'google-map-react';
-import axios from 'axios';
-
-
-
+import GoogleMapReact from "google-map-react";
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "../dashboard/Dashboard.css";
 import { Helmet } from "react-helmet";
@@ -15,59 +12,29 @@ import DashboardBlogCard from "../Sections/DashboardBlogCard";
 import Modal from "../Modal/Modal";
 import "../Sections/blogCard.css";
 
-
 const NearClinic = () => {
+	const [location, setLocation] = useState("");
 
-const [location, setLocation] = useState({});
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+			console.log("Location Found");
+		} else {
+			console.log("Error");
+		}
+	}
 
-  function getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-      console.log("Location Found");
-      
-    } else {
-      console.log("Error");
-    }
-  }
+	function showPosition(position) {
+		if (position) {
+			console.log(position);
+			console.log(position.coords);
+			console.log(position.coords.latitude);
+			console.log(position.coords.longitude);
+			setLocation(`${position.coords.latitude},${position.coords.longitude}`);
+		}
+	}
 
-  useEffect(() => {
-    // if (location) {
-    //   console.log(location);
-    // }
-    // if (location.coords) {
-    //   console.log(location.coords);
-    // }
-    // if (location.coords.latitude) {
-    //     console.log(location.coords.latitude);
-    //     console.log(location.coords.longitude);
-    // }
-    setTimeout(() => {
-        getLocation();
-    }, 2500);
-    
-}, []);
-
-  
-  function showPosition(position) {
-    if (position) {
-        console.log(position);
-        console.log(position.coords);
-        console.log(position.coords.latitude);
-        console.log(position.coords.longitude);
-
-        // setLocation({
-        //     latitude: position.coords.latitude,
-        //     longitude: position.coords.longitude
-        //     });
-    }
-  }
-
-
-
-
-
-
-      const navigate = useNavigate();
+	const navigate = useNavigate();
 	const [CurrentUser, SetCurrentuser] = useState({});
 	const [openModel, setOpenModel] = useState(false);
 	const [blogs, setblogs] = useState([]);
@@ -89,39 +56,17 @@ const [location, setLocation] = useState({});
 			}
 		});
 	};
-	function getBlogs() {
-		let blog = [];
-		let ids = [];
-		db.collection("blogs")
-			.doc(auth.currentUser?.uid)
-			.collection("blog")
-			.onSnapshot((snapshot) => {
-				snapshot.docs.map((doci) => {
-					ids.push(doci.id);
-					// console.log(doci.id, doci.data());
-					blog.push(doci.data());
-				});
-			});
-		setsize(blog.length);
-		setblogs(blog);
-		setidarr(ids);
-	}
-
-
 	useEffect(() => {
 		userActivity();
-        // getLocation();
+		getLocation();
 		return () => {
 			SetCurrentuser({});
 		};
 	}, []);
 
-      
-
-
 	return (
 		<div className="clinic">
-			<h1>Maps</h1>
+			{/* <h1>Maps</h1> */}
 			{/* // Important! Always set the container height explicitly */}
 			{/* <div style={{ height: "90vh", width: "100%" }}>
 				<GoogleMapReact
@@ -130,10 +75,11 @@ const [location, setLocation] = useState({});
 					defaultZoom={defaultProps.zoom}
 				></GoogleMapReact>
 			</div> */}
-           
+
 			{/* <!-- Banner --> */}
 			<a
 				href="https://donate.stripe.com/test_eVa8xv6m603J4Za148"
+				target={"_blank"}
 				className="btn w-full btn-primary text-truncate rounded-0 border-0 position-relative"
 				style={{ zIndex: "1000", background: "#E52F8A", marginTop: "0px" }}
 			>
@@ -446,13 +392,24 @@ const [location, setLocation] = useState({});
 									</li> */}
 								</ul>
 							</div>
+							{openModel && <Modal setOpenModel={setOpenModel} />}
 						</div>
 					</header>
 					{/* <!-- Main --> */}
 					<main className="py-6 bg-surface-secondary">
 						<div className="container-fluid">
-                        <iframe src="https://maps.google.com/maps?ll=${position.coords.latitude},${position.coords.longitude}&q=pharmacy&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="900" allowfullscreen ></iframe>
-
+							{/* <iframe
+								src={`https://maps.google.com/maps?ll=${location}&q=pharmacy&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;&output=embed`}
+								width="100%"
+								height="900"
+								allowfullscreen
+							></iframe> */}
+							<iframe
+								src={`https://maps.google.com/maps?ll=${location}&q=pharmacy&amp;&z=13&amp;ie=UTF8&amp;iwloc=&amp;&output=embed`}
+								width="100%"
+								height="900"
+								allowfullscreen
+							></iframe>
 						</div>
 					</main>
 				</div>

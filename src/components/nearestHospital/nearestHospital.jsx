@@ -1,7 +1,5 @@
-import GoogleMapReact from 'google-map-react';
-import axios from 'axios';
-
-
+import GoogleMapReact from "google-map-react";
+import axios from "axios";
 
 import React, { useEffect, useState } from "react";
 import "../dashboard/Dashboard.css";
@@ -15,16 +13,33 @@ import DashboardBlogCard from "../Sections/DashboardBlogCard";
 import Modal from "../Modal/Modal";
 import "../Sections/blogCard.css";
 
-
 const NearHospital = () => {
-
-
-      const navigate = useNavigate();
+	const navigate = useNavigate();
 	const [CurrentUser, SetCurrentuser] = useState({});
 	const [openModel, setOpenModel] = useState(false);
 	const [blogs, setblogs] = useState([]);
 	const [idarr, setidarr] = useState([]);
 	const [size, setsize] = useState(0);
+	const [location, setLocation] = useState("");
+
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+			console.log("Location Found");
+		} else {
+			console.log("Error");
+		}
+	}
+
+	function showPosition(position) {
+		if (position) {
+			console.log(position);
+			console.log(position.coords);
+			console.log(position.coords.latitude);
+			console.log(position.coords.longitude);
+			setLocation(`${position.coords.latitude},${position.coords.longitude}`);
+		}
+	}
 
 	const userActivity = () => {
 		onAuthStateChanged(auth, (user) => {
@@ -59,20 +74,17 @@ const NearHospital = () => {
 		setidarr(ids);
 	}
 
-
 	useEffect(() => {
+		getLocation();
 		userActivity();
 		return () => {
 			SetCurrentuser({});
 		};
 	}, []);
 
-      
-
-
 	return (
 		<div className="clinic">
-			<h1>Maps</h1>
+			{/* <h1>Maps</h1> */}
 			{/* // Important! Always set the container height explicitly */}
 			{/* <div style={{ height: "90vh", width: "100%" }}>
 				<GoogleMapReact
@@ -81,10 +93,11 @@ const NearHospital = () => {
 					defaultZoom={defaultProps.zoom}
 				></GoogleMapReact>
 			</div> */}
-           
+
 			{/* <!-- Banner --> */}
 			<a
 				href="https://donate.stripe.com/test_eVa8xv6m603J4Za148"
+				target={"_blank"}
 				className="btn w-full btn-primary text-truncate rounded-0 border-0 position-relative"
 				style={{ zIndex: "1000", background: "#E52F8A", marginTop: "0px" }}
 			>
@@ -397,13 +410,18 @@ const NearHospital = () => {
 									</li> */}
 								</ul>
 							</div>
+							{openModel && <Modal setOpenModel={setOpenModel} />}
 						</div>
 					</header>
 					{/* <!-- Main --> */}
 					<main className="py-6 bg-surface-secondary">
 						<div className="container-fluid">
-                        <iframe src="https://maps.google.com/maps?ll=18.472329,73.912398&q=hospitals&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="900" allowfullscreen ></iframe>
-
+							<iframe
+								src={`https://maps.google.com/maps?ll=${location}&q=hospitals&amp;&z=13&amp;ie=UTF8&amp;iwloc=&amp;&output=embed`}
+								width="100%"
+								height="900"
+								allowfullscreen
+							></iframe>
 						</div>
 					</main>
 				</div>

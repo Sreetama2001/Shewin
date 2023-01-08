@@ -39,7 +39,7 @@ const Blog = () => {
 									onClick={() => navigate(`/blog/${idi[idx]}`)}
 									src="https://mindindia.org/public/uploads/blog/613f08cf0aaa0_tmpphphkkqhm.jpg"
 									alt="card__image"
-									style={{cursor:"pointer"}}
+									style={{ cursor: "pointer" }}
 									className="card__image img"
 									width="600"
 								/>
@@ -66,8 +66,8 @@ const Blog = () => {
 						</div>
 					))}
 				</div>
+				<Footer />
 			</div>
-			<Footer />
 		</>
 	);
 };

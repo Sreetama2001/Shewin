@@ -52,16 +52,12 @@ export default function TopNavbar() {
 							</Link>
 						</li>
 						<li className="semiBold font15 pointer hover">
-							<Link
-								activeclassName="active"
+							<Anc
 								style={{ padding: "10px 15px", color: "black" }}
-								spy={true}
-								to="projects" // changing this to projects or health services
-								smooth={true}
-								offset={-80}
+								to="/track" // changing this to projects or health services
 							>
 								Trackers
-							</Link>
+							</Anc>
 						</li>
 						{/* <li className="semiBold font15 pointer hover">
 							<Link
