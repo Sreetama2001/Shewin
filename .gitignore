@@ -13,6 +13,9 @@ pipfile
 /build
 
 # misc
+pipfile
+__pycache__
+.vscode
 .DS_Store
 .env.local
 .env.development.local
