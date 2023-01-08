@@ -13,6 +13,9 @@ const Dashboard = () => {
 	const navigate = useNavigate();
 	const [CurrentUser, SetCurrentuser] = useState({});
 	const [openModel, setOpenModel] = useState(false);
+	const [blogs, setblogs] = useState([]);
+	const [idarr, setidarr] = useState([]);
+	const [size, setsize] = useState(0);
 
 	const userActivity = () => {
 		onAuthStateChanged(auth, (user) => {
@@ -29,8 +32,6 @@ const Dashboard = () => {
 			}
 		});
 	};
-	const [blogs, setblogs] = useState([]);
-	const [idarr, setidarr] = useState([]);
 	function getBlogs() {
 		let blog = [];
 		let ids = [];
@@ -40,21 +41,20 @@ const Dashboard = () => {
 			.onSnapshot((snapshot) => {
 				snapshot.docs.map((doci) => {
 					ids.push(doci.id);
+					// console.log(doci.id, doci.data());
 					blog.push(doci.data());
 				});
 			});
+		setsize(blog.length);
 		setblogs(blog);
 		setidarr(ids);
 	}
 
+
 	useEffect(() => {
 		userActivity();
-		getBlogs();
-
 		return () => {
-			setblogs([]);
-			setidarr([]);
-			CurrentUser({});
+			SetCurrentuser({});
 		};
 	}, []);
 
@@ -190,7 +190,7 @@ const Dashboard = () => {
 									<Link className="nav-link" to={"/blogform"}>
 										<i className="bi bi-chat"></i> Blogs
 										<span className="badge bg-soft-primary text-primary rounded-pill d-inline-flex align-items-center ms-auto">
-											6
+											{size}
 										</span>
 									</Link>
 								</li>
@@ -199,11 +199,11 @@ const Dashboard = () => {
 										<i className="bi bi-bookmarks"></i> Period Tracker
 									</Link>
 								</li>
-								<li className="nav-item">
+								{/* <li className="nav-item">
 									<Link className="nav-link" to={"/profile"}>
 										<i className="bi bi-people"></i> Profile
 									</Link>
-								</li>
+								</li> */}
 							</ul>
 							{/* <!-- Divider --> */}
 							<hr className="navbar-divider my-5 opacity-20" />
@@ -211,6 +211,7 @@ const Dashboard = () => {
 							<ul className="navbar-nav mb-md-4">
 								<li>
 									<div
+										onClick={() => console.log(blogs)}
 										className="nav-link text-xs font-semibold text-uppercase text-muted ls-wide"
 										href="#"
 									>
@@ -387,7 +388,7 @@ const Dashboard = () => {
 													<span className="h6 font-semibold text-muted text-sm d-block mb-2">
 														Sleeping Stats
 													</span>
-													<span className="h3 font-bold mb-0">$750.90</span>
+													<span className="h3 font-bold mb-0">5 Days</span>
 												</div>
 												<div className="col-auto">
 													<div className="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
@@ -414,7 +415,9 @@ const Dashboard = () => {
 													<span className="h6 font-semibold text-muted text-sm d-block mb-2">
 														Blog Published
 													</span>
-													<span className="h3 font-bold mb-0">215</span>
+													<span className="h3 font-bold mb-0">
+														{size}
+													</span>
 												</div>
 												<div className="col-auto">
 													<div className="icon icon-shape bg-primary text-white text-lg rounded-circle">
@@ -488,25 +491,8 @@ const Dashboard = () => {
 									</div>
 								</div>
 							</div>
-							{blogs.map((item, idx) => {
-								console.log(item.title);
-								return (
-									<div class="courses-container">
-										<div class="course" style={{ width: "90%" }}>
-											<div class="course-preview">
-												<h6>{item.date}</h6>
-												<h2>{item.title}</h2>
-											</div>
-											<div class="course-info">
-												<div class="progress-container"></div>
-												<h6>{item.text}</h6>
-												<button class="btnii">Delete</button>
-											</div>
-										</div>
-									</div>
-								);
-							})}
 							{openModel && <Modal setOpenModel={setOpenModel} />}
+							<DashboardBlogCard setsize={setsize} />
 						</div>
 					</main>
 				</div>
