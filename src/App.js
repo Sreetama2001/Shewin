@@ -15,6 +15,7 @@ import BlogShow from "./components/BlogShow/BlogShow.jsx";
 import DashboardBlogCard from "./components/Sections/DashboardBlogCard.jsx";
 import Modal from "./components/Modal/Modal"
 import NearClinic from "./components/nearestClinic/nearestClinic.jsx";
+import NearHospital from "./components/nearestHospital/nearestHospital.jsx";
 
 export default function App() {
 	return (
@@ -43,6 +44,7 @@ export default function App() {
 					<Route path="/blogform" element={<BlogForm />} />
 					<Route path="/dash" element={<DashboardBlogCard />} />
 					<Route path="/nearclinic" element={<NearClinic />} />
+					<Route path="/nearhospital" element={<NearHospital />} />
 				</Routes>
 			</BrowserRouter>
 		</>
