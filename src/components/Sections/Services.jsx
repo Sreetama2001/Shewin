@@ -85,7 +85,7 @@ export default function Services() {
 										</Link>
 									</div>
 									<div style={{ width: "190px", marginLeft: "15px" }}>
-										<Link to={"/appointment"}>
+										<Link to= "/contact">
 											<FullButton title="Share only to Us" border />
 										</Link>
 									</div>
