@@ -179,7 +179,7 @@ Leader - [Sreetama](mailto:fool100abc@gmail.com)
 
 Project Link: [Shewin](https://shewin.netlify.app)
 
-Video Link : [Shewin Demo Video](https://www.youtube.com/watch?v=xerCwrJMf90)
+Video Link : [Shewin Demo Video](https://www.loom.com/share/462c7f86c84c499fa979a25336036709)
 
 ## Team Members: 
 
