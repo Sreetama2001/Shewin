@@ -107,54 +107,42 @@ This is the form , using this form user can book their appointment with their co
 
 ## **Period Tracker**
 This is our feature where the user can tracker the upcoming period perdictions as per the present senerio of their period. She also can download the result as the pdf format.
+
 ![image](https://user-images.githubusercontent.com/86917304/211191003-a7ef4e3d-fafc-41e8-95ef-e9eabdca712e.png)
 ### Result
+
 ![image](https://user-images.githubusercontent.com/86917304/211191012-66b8aaa9-781f-4c57-93c2-b53b47436b1c.png)
 
 ---
 
 ## Dashboard
 This is the place where **Shewinner** can excess the extra features and can get all the cummilative features and feedback at one place only with just a single click.
+
 ![image](https://user-images.githubusercontent.com/86917304/211191115-933a9ca5-3c04-405e-b236-fab6d3bff685.png)
 
-
-## **Now Fill in the Symtopms you likely have**
-
-
-
-![Welcome](./images/symtom.jpg)
-
-
-
-
-## **Hurray ! We got the results**
-
-**Here we see we have got a diagonis report and possibility of having the disease based on the patients track record of previous illness along with the other symtoms of that disease**
-
-
-*Add_in : You can also learn about the disease directly by clicking on info*
-
-
-
-![Welcome](./images/disease_report.jpg)
-
-
-
-
-
-## **Here we have our Joke bot ! Joke_bot helps you to get rid of the stress troubling you**
-
-
-
-![Welcome](./images/joke_bot.jpg)
-
-
-
-
-## **Doctor's call is final, So do check yourself up with doctor!!**
-
-### Deskstop View
-![image](https://user-images.githubusercontent.com/86917304/190920646-b3ddd488-9d46-41fa-b167-173541c76426.png)
+   - ### Nearest Pharmacy
+  This is will allow the user to get info about the nearest pharmacy as per his/her location.
+  
+  ![image](https://user-images.githubusercontent.com/86917304/211191688-a7045374-617a-4bb3-9ddf-2cbe6a926da3.png)
+  
+   - ### Nearest Hospital
+   This is will allow the user to get info about the nearest pharmacy as per his/her location.
+   
+  ![image](https://user-images.githubusercontent.com/86917304/211191726-a64b5543-a594-4606-a2d8-577a5fdb28b0.png)
+  
+  - ### Setting Reminder
+    From this feature he or she can set the reminder about the appointment , period dates or any other type of reminder and they will get the reminder via email           registered with our platform.
+    
+    ![image](https://user-images.githubusercontent.com/86917304/211191954-af71efc2-0682-4102-9f09-def32fe8f3d3.png)
+    
+  - ### Blogs Publish
+    Through this user can published their blogs to our platform and also track the blog published by them on the dashboard only.
+    
+    ![image](https://user-images.githubusercontent.com/86917304/211191996-0baa8eef-e5f2-4e07-831d-c97a1e40d05a.png)
+    
+      - Blog Published by user
+        Below card will show all the blogs published by the user
+        ![image](https://user-images.githubusercontent.com/86917304/211192155-8dad7292-36df-4efc-8c8e-516881732e2b.png)
 
 ### Phone View
 - We going one step ahead we convert out website into the **PWA**, so that our user experience in mobile phones will be top notch and hence he/she can contribute as well as get extraodinary experience through our platform. 
