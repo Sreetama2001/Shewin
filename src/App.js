@@ -15,6 +15,7 @@ import BlogShow from "./components/BlogShow/BlogShow.jsx";
 import DashboardBlogCard from "./components/Sections/DashboardBlogCard.jsx";
 import NearClinic from "./components/nearestClinic/nearestClinic.jsx";
 import NearHospital from "./components/nearestHospital/nearestHospital.jsx";
+import MoodyBot from "./components/moodyBot.jsx";
 
 export default function App() {
 	return (
@@ -43,6 +44,7 @@ export default function App() {
 					<Route path="/dash" element={<DashboardBlogCard />} />
 					<Route path="/nearclinic" element={<NearClinic />} />
 					<Route path="/nearhospital" element={<NearHospital />} />
+					<Route path="/moodybot" element={<MoodyBot />} />
 				</Routes>
 			</BrowserRouter>
 		</>
