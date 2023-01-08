@@ -31,8 +31,9 @@ A new report published by UNICEF and WaterAid found that more than a third of gi
 
 ## How it works :
 
-- We have here to modernized our healthcare system and providing the personalized feedbacks and analysis to specially womens, who hesitate because of insecurities through our platform she can `Track Period Cycle`,  Get the `Mood Analysis` and As per the location she will get the nearest hospitals and pharmacy for their problems specially related to the periods and others. Through our platform only user can `Scheduling Appointments` with Doctors and get consultancy at home only.
-- We also have the blog sections where the **Shewinners** can share their story, experience and also aware the world about different streotypes, Through this section we are giving the platform to showcase knowledge and help user to contribute in a constrctive manner in the society.
+  We have here to modernized our women healthcare system by providing the personalized feedbacks, analysis, mood tracking, period cycle traking to  women, who hesitate because of their insecurities and long run social stigma.
+  Through our platform she can `Track her Period Cycle`,  Get her `Mood Analysis` and she will also get to access the nearest hospitals and gynaecologists for their medical problems. Through our platform only user can `Schedule Appointments` with doctors and get consultancy at home only.
+  We also have the blog sections where the **Shewinners** can write the blogs to aware the world about different streotypes, Through this section we are giving a platform to showcase their knowledge and help each girl to contribute in a constructive manner in the society.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
