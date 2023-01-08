@@ -142,6 +142,7 @@ This is the place where **Shewinner** can excess the extra features and can get 
     
       - Blog Published by user
         Below card will show all the blogs published by the user
+        
         ![image](https://user-images.githubusercontent.com/86917304/211192155-8dad7292-36df-4efc-8c8e-516881732e2b.png)
 
 ### Phone View
