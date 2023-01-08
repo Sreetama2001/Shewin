@@ -5,19 +5,19 @@
     <img src="https://user-images.githubusercontent.com/86917304/189530487-4f2eba29-9268-4801-9f4f-b2a9b03948a1.png" width="100px" alt="">
   </a>
 
-  <h3 align="center">Wecare - The HealthVerse</h3>
+  <h3 align="center">Shewin - We Care She Wins</h3>
 
   <p align="center">
-    <a href="https://wecare32.vercel.app/" target="blank">Live Demo</a> |
-    <a href="https://github.com/Sreetama2001/WeCare_Hackit/issues" target="blank">Report Bug</a> |
-    <a href="https://github.com/Sreetama2001/WeCare_Hackit/issues" target="blank">Request Feature</a>
+    <a href="https://shewin.netlify.app/" target="blank">Live Demo</a> |
+    <a href="https://github.com/Sreetama2001/SheWins-Period_Helper/issues" target="blank">Report Bug</a> |
+    <a href="https://github.com/Sreetama2001/SheWins-Period_Helper/issues" target="blank">Request Feature</a>
   </p>
 </div>
 
 ---
 
 ## The motivation:
-As per the Lancet [report](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18)31668-4/fulltext) 1.6 million Indians died due to poor quality of care in 2016. And nearly twice as many as due to non-utilisation of healthcare services(838,000 persons) that why we visualized to make the healthcare system more mobile and easy available with 27*7 capabilities. 
+A new report published by UNICEF and WaterAid found that more than a third of girls in South Asia miss school during their periods, mainly due to a lack of access to toilets and pads in schools and no proper education about menstruation. The UN has recognized menstrual hygiene as a global public health and human rights issue, globally 1.2 billion women lack access to basic sanitation and hygiene. So we decided to end the Period-Poverty and long-run stigma by educating girls and providing healthcare facilities to them.
 
 <!-- <img
   src=""
@@ -31,7 +31,8 @@ As per the Lancet [report](https://www.thelancet.com/journals/lancet/article/PII
 
 ## How it works :
 
-We have here modernized our healthcare system through  WeCare Fun Bot , WeCare Checker , Scheduling Appointments with Doctors and Doctor Login System .The fun bot is used to tell jokes to uplift our mood through jokes , Jokes helps one to cope mental pressure and lighten our mood. Here we are prediciting one's possiblity to have a certain Disease. Here we are using our model's API to predict the possibility to have the particular disease based  on specific chosen symtoms. Finally we are also allowing users to book online appointment for check up. 
+- We have here to modernized our healthcare system and providing the personalized feedbacks and analysis to specially womens, who hesitate because of insecurities through our platform she can `Track Period Cycle`,  Get the `Mood Analysis` and As per the location she will get the nearest hospitals and pharmacy for their problems specially related to the periods and others. Through our platform only user can `Scheduling Appointments` with Doctors and get consultancy at home only.
+- We also have the blog sections where the **Shewinners** can share their story, experience and also aware the world about different streotypes, Through this section we are giving the platform to showcase knowledge and help user to contribute in a constrctive manner in the society.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -39,13 +40,13 @@ We have here modernized our healthcare system through  WeCare Fun Bot , WeCare C
 
 ## Technologies Used :
 
-1. **Frontend frameworks** : `React` `SASS` `react-router-dom` `react-toastify` `react-helmet`
+1. **Frontend frameworks** : `React` `SASS` `react-router-dom` `react-toastify` `CSS3`
 
 2. **Authenciation**       : `Firebase`
 
-3. **Database and storage**: `Firestore`
+3. **Database and storage**: `Firestore` `MongoDB`
 
-4. **Services**            : `Azure` `JOKE API` `Postman` `Kaggle` `Vercel` 
+4. **Services**            : `Azure` `Google Maps API` `Postman` `Kaggle` `netlify` 
 
 5. **Deployment**          : `Docker` `FastAPI`
 
@@ -86,12 +87,10 @@ _Below is an example of how you can instruct your audience on installing and set
 
 ## Welcome Your Web app
 
-![image](https://user-images.githubusercontent.com/86917304/190920522-992303a5-a233-431f-a851-f2b19fa402b5.png)
+![image](https://user-images.githubusercontent.com/86917304/211189642-7d5a2888-8076-488d-82cb-ed66d0be3872.png)
 
 
 ## **Fill out the details as such your gender and age**
-
-
 
 ![Welcome](./images/welcome_page.jpg)
 
@@ -144,7 +143,10 @@ _Below is an example of how you can instruct your audience on installing and set
 ![image](https://user-images.githubusercontent.com/86917304/190920646-b3ddd488-9d46-41fa-b167-173541c76426.png)
 
 ### Phone View
-![Welcome](./images/google_form.jpg)
+- We going one step ahead we convert out website into the **PWA**, so that our user experience in mobile phones will be top notch and hence he/she can contribute as well as get extraodinary experience through our platform. 
+
+![image](https://user-images.githubusercontent.com/86917304/211190064-db56b99d-9fe6-47df-9e20-0a10db3c8c94.png)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -168,18 +170,17 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Team Name - Hackit
+Team Name - Buggies
 
 Leader - [Sreetama](mailto:fool100abc@gmail.com)
 
-Project Link: [Wecare](https://wecare32.vercel.app/)
+Project Link: [Shewin](https://shewin.netlify.app)
 
-Video Link : [Wecare](https://www.youtube.com/watch?v=xerCwrJMf90)
+Video Link : [Shewin Demo Video](https://www.youtube.com/watch?v=xerCwrJMf90)
 
 ## Team Members: 
 
 - [Sreetama Ghosh Hazar](https://github.com/Sreetama2001)
-- [Suresh Kumar](https://github.com/sureshk-15)
 - [Pranshu Jain](https://github.com/Pranshu321)
 - [Mohammad Sami Shaikh](https://github.com/MSamiDev)
 
@@ -196,15 +197,10 @@ Use this space to list resources you find helpful and would like to give credit 
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Alan Ai](https://alan.app/)
 * [Favicon Converter](https://favicon.io/favicon-converter/)
+* [Firebase](https://firebase.google.com/)
 * [Img Shields](https://shields.io)
 * [GitHub Pages](https://pages.github.com)
 * [Font Awesome](https://fontawesome.com)
 * [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-
-
-
