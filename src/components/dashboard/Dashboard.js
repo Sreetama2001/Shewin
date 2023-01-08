@@ -9,7 +9,7 @@ import { textAlign } from "@mui/system";
 import DashboardBlogCard from "../Sections/DashboardBlogCard";
 import Modal from "../Modal/Modal";
 import "../Sections/blogCard.css";
-import { MdLocalHospital } from 'react-icons/md';
+import { MdLocalHospital } from "react-icons/md";
 
 const Dashboard = () => {
 	const navigate = useNavigate();
@@ -51,7 +51,6 @@ const Dashboard = () => {
 		setblogs(blog);
 		setidarr(ids);
 	}
-
 
 	useEffect(() => {
 		userActivity();
@@ -137,7 +136,11 @@ const Dashboard = () => {
 									<div className="avatar-parent-child">
 										<img
 											alt="Image Placeholder"
-											src="https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
+											src={
+												CurrentUser.photoURL != null
+													? CurrentUser?.photoURL
+													: "https://user-images.githubusercontent.com/86917304/189530487-4f2eba29-9268-4801-9f4f-b2a9b03948a1.png"
+											}
 											className="avatar avatar- rounded-circle"
 										/>
 										<span className="avatar-child avatar-badge bg-success"></span>
@@ -183,11 +186,11 @@ const Dashboard = () => {
 										<i className="bi bi-house"></i> Home
 									</Link>
 								</li>
-								<li className="nav-item">
+								{/* <li className="nav-item">
 									<Link className="nav-link" to="/moodtracker">
 										<i className="bi bi-bar-chart"></i> Mood Tracker
 									</Link>
-								</li>
+								</li> */}
 								<li className="nav-item">
 									<Link className="nav-link" to={"/blogform"}>
 										<i className="bi bi-chat"></i> Blogs
@@ -427,9 +430,7 @@ const Dashboard = () => {
 													<span className="h6 font-semibold text-muted text-sm d-block mb-2">
 														Blog Published
 													</span>
-													<span className="h3 font-bold mb-0">
-														{size}
-													</span>
+													<span className="h3 font-bold mb-0">{size}</span>
 												</div>
 												<div className="col-auto">
 													<div className="icon icon-shape bg-primary text-white text-lg rounded-circle">

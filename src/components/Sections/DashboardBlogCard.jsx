@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./blogCard.css";
 import { auth, db } from "../../firebase";
 import { useLayoutEffect } from "react";
-import { toast , Toaster} from "react-hot-toast";
+import { toast, Toaster } from "react-hot-toast";
 
 const DashboardBlogCard = ({ setsize }) => {
 	const [blogs, setblogs] = useState([]);
@@ -39,7 +39,7 @@ const DashboardBlogCard = ({ setsize }) => {
 			setblogs([...blogs, item.data()]);
 			setidarr([...idarr, item.id]);
 		});
-		setsize(i / 3);
+		setsize(Math.ceil(i / 3));
 	}
 
 	useLayoutEffect(() => {
