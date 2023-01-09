@@ -173,7 +173,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Team Name - Buggies
+Team Name - Hackit
 
 Leader - [Sreetama](mailto:fool100abc@gmail.com)
 
