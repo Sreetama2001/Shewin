@@ -1,7 +1,7 @@
-<h1 align="center">Shewin</h1>
+<h1 align="center"><b>Shewin</b></h1>
 
 <div align="center">
-  <a id="top" href="" target="blank">
+  <a id="top" href="https://shewin.netlify.app/" target="blank">
     <img src="https://user-images.githubusercontent.com/86917304/189530487-4f2eba29-9268-4801-9f4f-b2a9b03948a1.png" width="100px" alt="">
   </a>
 
