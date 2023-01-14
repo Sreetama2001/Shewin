@@ -427,7 +427,7 @@ const MoodyBot = () => {
 								<ul className="nav nav-tabs mt-4 overflow-x border-0">
 									<li className="nav-item ">
 										<a href="#" className="nav-link active">
-											Nearest Hospitals
+											Mood Tracker
 										</a>
 									</li>
 									{/* <li className="nav-item">
@@ -447,7 +447,7 @@ const MoodyBot = () => {
 					{/* <!-- Main --> */}
 					<main className="py-6 bg-surface-secondary">
 						<div className="container-fluid">
-							<header className="header">Wecare Fun Bot</header>
+							<header className="header">Moody Bot</header>
 							<div className="chatbot">
 								<Messages messages={messages} />
 								<Input onSend={send} />

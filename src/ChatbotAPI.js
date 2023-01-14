@@ -70,7 +70,7 @@ const API = {
 			setTimeout(function () {
 				if (message === "hi" || message === "hello" || message === "hey")
 					resolve(
-						"Here I am  your mood guesser bot , I will send you jokes which will make you happy!. "
+						"Here I am  your Moody bot ! I can analyse ur mood as you write "
 					);
 				else {
 					const data = moodGuesser(message);

@@ -40,7 +40,7 @@ const MoodyBot = () => {
 	return (
 		<div className="body">
 		<header className="header">
-			Wecare Fun Bot
+			Moody Bot
 		</header>
 		<div className="chatbot">
 			<Messages messages={messages} />
